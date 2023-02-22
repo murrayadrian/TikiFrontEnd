@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html
+    xmlns:th="http://www.thymeleaf.org"
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <link rel="stylesheet" th:href="@{https://sc-frontend.tikicdn.com/new/vendors.0641f3f6.chunk.css}">
+    <link rel="stylesheet" th:href="@{https://sc-frontend.tikicdn.com/new/umi.424eb240.css}">
+    <link rel="stylesheet" th:href="@{https://sc-frontend.tikicdn.com/new/commons.c418c13d.chunk.css}">
+
+    <link rel="stylesheet" th:href="@{https://account.tiki.vn/_next/static/css/748d52ef6c5f93f3764e.css}">
+
+    <script th:src="@{https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js}"></script>
+    <script type="text/javascript" src="../static/js/dashboard.js" th:src="@{/js/dashboard.js}"></script>
+    <style>
+        #sc-frontend-products-root .sc-dkzDqf {
+            background: #fff;
+            padding: 12px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        #sc-frontend-products-root .sc-hKMtZM {
+            -webkit-flex-wrap: nowrap;
+            -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+            overflow: auto;
+            margin-bottom: 4px;
+        }
+        .ant-breadcrumb {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+            font-variant: tabular-nums;
+            line-height: 1.5715;
+            list-style: none;
+            font-feature-settings: "tnum", "tnum";
+            color: rgba(0, 0, 0, 0.45);
+            font-size: 14px;
+        }
+        .ant-breadcrumb ol {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+        }
+        .ant-breadcrumb ol li:last-child > .ant-breadcrumb-separator {
+            display: none;
+        }
+        .ant-breadcrumb-separator {
+            margin: 0px 8px;
+            color: rgba(0, 0, 0, 0.45);
+        }
+        #sc-frontend-products-root .sc-eCYdqJ {
+            font-size: 20px;
+            font-weight: 500;
+            color: rgba(0,0,0,0.85);
+        }
+        .ant-cascader-menus {
+            position: relative;
+            box-shadow: none;
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: flex-start;
+        }
+        #sc-frontend-products-root .sc-jSMfEi {
+            margin-top: 16px;
+        }
+        .ant-form {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+            color: rgba(0, 0, 0, 0.85);
+            font-size: 14px;
+            font-variant: tabular-nums;
+            line-height: 1.5715;
+            list-style: none;
+            font-feature-settings: "tnum", "tnum";
+        }
+        .ant-cascader-menu-item-expand-icon {
+            top: 4px;
+            margin-left: 4px;
+            font-weight: 600;
+        }
+        .ant-cascader-menu-item {
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            padding: 5px 12px;
+            overflow: hidden;
+            line-height: 22px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            cursor: pointer;
+            transition: all 0.3s ease 0s;
+        }
+        .ant-cascader-menus {
+            font-size: 14px;
+        }
+        .ant-cascader-menu {
+            height: 300px;
+            display: inline-block;
+            width:100%;
+            flex-grow: 1;
+        }
+        .ant-cascader-menu-item-content {
+            flex: 1 1 auto;
+        }
+        #sc-frontend-products-root .sc-bZnhIo {
+            color: #8c8c8c;
+            font-size: 18px;
+            font-weight: bold;
+            background-color: #fff;
+            position: absolute;
+            top: -16px;
+            left: 24px;
+            padding: 0 12px;
+        }
+        #sc-frontend-products-root .sc-ciZhAO {
+            border: 1px solid #d9d9d9;
+            border-radius: 8px;
+            padding: 42px 12px 12px 12px;
+            position: relative;
+            margin-top: 16px;
+            margin-bottom: 16px;
+        }
+        #sc-frontend-products-root .sc-jIZahH {
+            position: -webkit-sticky;
+            position: sticky;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #fff;
+            z-index: 10;
+            box-shadow: 0 1px 4px 0 rgb(0 0 0 / 50%);
+        }
+        #sc-frontend-products-root .sc-himrzO {
+            padding: 16px;
+            text-align: right;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: end;
+            -webkit-justify-content: flex-end;
+            -ms-flex-pack: end;
+            justify-content: flex-end;
+        }
+        #sc-frontend-products-root .ant-form-item-control {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        .ant-input-number-group-wrapper {
+            display: inline-block;
+            text-align: start;
+            vertical-align: top;
+        }
+        .ant-input-number-group {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+            color: rgba(0, 0, 0, 0.85);
+            font-size: 14px;
+            font-variant: tabular-nums;
+            line-height: 1.5715;
+            list-style: none;
+            font-feature-settings: "tnum", "tnum";
+            position: relative;
+            display: table;
+            width: 100%;
+            border-collapse: initial;
+            border-spacing: 0px;
+        }
+        #sc-frontend-products-root .ant-input-number-group-addon:first-child {
+            border-right: 0px;
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+        .ant-input-number-group-addon {
+            position: relative;
+            padding: 0px 11px;
+            color: rgba(0, 0, 0, 0.85);
+            font-weight: 400;
+            font-size: 14px;
+            text-align: center;
+            background-color: rgb(250, 250, 250);
+            border: 1px solid rgb(217, 217, 217);
+            border-radius: 2px;
+            width: 1px;
+            white-space: nowrap;
+            vertical-align: middle;
+            display: table-cell;
+            transition: all 0.3s ease 0s;
+        }
+        .ant-input-number-handler-wrap {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            width: 22px;
+            height: 100%;
+            background: rgb(255, 255, 255);
+            border-radius: 0px 2px 2px 0px;
+            opacity: 0;
+            transition: opacity 0.24s linear 0.1s;
+        }
+        .ant-form-item .ant-input-number-handler-wrap {
+            z-index: 2;
+        }
+
+        .ant-form-item-control-input-content {
+            flex: 1 1 auto;
+            max-width: 100%;
+        }
+        .ant-form-item-control-input {
+            position: relative;
+            display: flex;
+            align-items: center;
+            min-height: 32px;
+        }
+        #sc-frontend-products-root .sc-jdAMXn {
+            background-color: #e6f7ff;
+            margin-top: 0;
+            padding: 12px;
+        }
+        .ant-input-number-group .ant-input-number {
+            float: left;
+            width: 100%;
+            margin-bottom: 0px;
+            text-align: inherit;
+        }
+        .ant-collapse > .ant-collapse-item > .ant-collapse-header {
+            position: relative;
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: flex-start;
+            padding: 12px 16px;
+            color: rgba(0, 0, 0, 0.85);
+            line-height: 1.5715;
+            cursor: pointer;
+            transition: all 0.3s ease 0s, visibility 0s ease 0s;
+        }
+        .ant-collapse-icon-position-end > .ant-collapse-item > .ant-collapse-header .ant-collapse-arrow {
+            position: absolute;
+            top: 50%;
+            right: 16px;
+            left: auto;
+            margin: 0px;
+            transform: translateY(-50%);
+        }
+        .link-text {
+            color: rgba(0, 0, 0, 0.85);
+        }
+    </style>
+</head>
+    <body>
+        <div id="root">
+            <section class="ant-layout ant-layout-has-sider container___dwZG8">
+                <aside
+                    class="ant-layout-sider ant-layout-sider-dark sider___3DNJN"
+                    style="flex: 0 0 250px; max-width: 250px; min-width: 250px; width: 250px;">
+                    <div class="ant-layout-sider-children">
+                        <div class="logo___11PiT" id="logo">
+                            <a href="#/"><img
+                                src="https://salt.tikicdn.com/cache/w32/ts/sellercenterFE/93/76/03/2a08fa4ae6a024a752fbba87d145bce8.png"
+                                alt="Seller Center"
+                                width="32"
+                                height="32">
+                                <h1>Seller Center</h1>
+                            </a>
+                        </div>
+                        <ul class="ant-menu ant-menu-root ant-menu-inline ant-menu-dark" style="padding-bottom: 160px; width: 100%; overflow-x: hidden;">
+                            
+                            <li class="ant-menu-submenu ant-menu-submenu-inline" style="padding-left: 16px;">
+                            <div class="ant-menu-submenu-title" style="padding-left: 16px;">
+                                <span role="img" aria-label="bar-chart" class="anticon anticon-bar-chart">
+                                    <svg
+                                        viewbox="64 64 896 896"
+                                        focusable="false"
+                                        data-icon="bar-chart"
+                                        width="1em"
+                                        height="1em"
+                                        fill="currentColor"
+                                        aria-hidden="true">
+                                    <path d="M888 792H200V168c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v688c0 4.4 3.6 8 8 8h752c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm-600-80h56c4.4 0 8-3.6 8-8V560c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v144c0 4.4 3.6 8 8 8zm152 0h56c4.4 0 8-3.6 8-8V384c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v320c0 4.4 3.6 8 8 8zm152 0h56c4.4 0 8-3.6 8-8V462c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v242c0 4.4 3.6 8 8 8zm152 0h56c4.4 0 8-3.6 8-8V304c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v400c0 4.4 3.6 8 8 8z"></path>
+                                    </svg>
+                                </span>
+                                <span class="ant-menu-title-content"> Trang chủ</span>
+                            </div>
+                            </li>
+                            <li class="ant-menu-submenu ant-menu-submenu-inline" style="padding-left: 16px;">
+                                <div class="ant-menu-submenu-title" style="padding-left: 16px;">
+                                    <span role="img" class="anticon anticon-shopping-cart">
+                                        <svg
+                                            viewbox="0 0 1024 1024"
+                                            focusable="false"
+                                            data-icon="shopping-cart"
+                                            width="1em"
+                                            height="1em"
+                                            fill="currentColor"
+                                            aria-hidden="true">
+                                            <path
+                                                d="M922.9 701.9H327.4l29.9-60.9 496.8-.9c16.8 0 31.2-12 34.2-28.6l68.8-385.1c1.8-10.1-.9-20.5-7.5-28.4a34.99 34.99 0 00-26.6-12.5l-632-2.1-5.4-25.4c-3.4-16.2-18-28-34.6-28H96.5a35.3 35.3 0 100 70.6h125.9L246 312.8l58.1 281.3-74.8 122.1a34.96 34.96 0 00-3 36.8c6 11.9 18.1 19.4 31.5 19.4h62.8a102.43 102.43 0 00-20.6 61.7c0 56.6 46 102.6 102.6 102.6s102.6-46 102.6-102.6c0-22.3-7.4-44-20.6-61.7h161.1a102.43 102.43 0 00-20.6 61.7c0 56.6 46 102.6 102.6 102.6s102.6-46 102.6-102.6c0-22.3-7.4-44-20.6-61.7H923c19.4 0 35.3-15.8 35.3-35.3a35.42 35.42 0 00-35.4-35.2zM305.7 253l575.8 1.9-56.4 315.8-452.3.8L305.7 253zm96.9 612.7c-17.4 0-31.6-14.2-31.6-31.6 0-17.4 14.2-31.6 31.6-31.6s31.6 14.2 31.6 31.6a31.6 31.6 0 01-31.6 31.6zm325.1 0c-17.4 0-31.6-14.2-31.6-31.6 0-17.4 14.2-31.6 31.6-31.6s31.6 14.2 31.6 31.6a31.6 31.6 0 01-31.6 31.6z"></path>
+                                        </svg>
+                                    </span>
+                                    <span class="ant-menu-title-content"> Danh sách đơn hàng</span>
+                                </div>
+                            </li>
+                            <li class="ant-menu-submenu ant-menu-submenu-inline" style="padding-left: 16px;">
+                                <div class="ant-menu-submenu-title" style="padding-left: 16px;">
+                                    <span role ="img" class="anticon anticon-laptop">
+                                        <svg
+                                            viewbox="64 64 896 896"
+                                            focusable="false"
+                                            data-icon="laptop"
+                                            width="1em"
+                                            height="1em"
+                                            fill="currentColor"
+                                            aria-hidden="true">
+                                            <path
+                                                d="M956.9 845.1L896.4 632V168c0-17.7-14.3-32-32-32h-704c-17.7 0-32 14.3-32 32v464L67.9 845.1C60.4 866 75.8 888 98 888h828.8c22.2 0 37.6-22 30.1-42.9zM200.4 208h624v395h-624V208zm228.3 608l8.1-37h150.3l8.1 37H428.7zm224 0l-19.1-86.7c-.8-3.7-4.1-6.3-7.8-6.3H398.2c-3.8 0-7 2.6-7.8 6.3L371.3 816H151l42.3-149h638.2l42.3 149H652.7z"></path>
+                                        </svg>
+                                    </span>
+                                    <span class="ant-menu-title-content"> Danh sách sản phẩm</span>
+                                </div>
+                            </li>
+                            <li class="ant-menu-submenu ant-menu-submenu-inline" style="padding-left: 16px;">
+                            <div class="ant-menu-submenu-title" style="padding-left: 16px;">
+                                <span role="img" class="anticon anticon-laptop">
+                                    <svg
+                                        viewbox="64 64 896 896"
+                                        focusable="false"
+                                        data-icon="laptop"
+                                        width="1em"
+                                        height="1em"
+                                        fill="currentColor"
+                                        aria-hidden="true">
+                                        <path d="M956.9 845.1L896.4 632V168c0-17.7-14.3-32-32-32h-704c-17.7 0-32 14.3-32 32v464L67.9 845.1C60.4 866 75.8 888 98 888h828.8c22.2 0 37.6-22 30.1-42.9zM200.4 208h624v395h-624V208zm228.3 608l8.1-37h150.3l8.1 37H428.7zm224 0l-19.1-86.7c-.8-3.7-4.1-6.3-7.8-6.3H398.2c-3.8 0-7 2.6-7.8 6.3L371.3 816H151l42.3-149h638.2l42.3 149H652.7z"></path>
+                                    </svg>
+                                </span>
+                                <span class="ant-menu-title-content"> Tạo sản phẩm</span>
+                            </div>
+                            </li>
+                            <li class="ant-menu-submenu ant-menu-submenu-inline" style="padding-left: 16px;">
+                            <div class="ant-menu-submenu-title" style="padding-left: 16px;">
+                                <span role="img" aria-label="shop" class="anticon anticon-shop">
+                                    <svg
+                                        viewbox="64 64 896 896"
+                                        focusable="false"
+                                        data-icon="shop"
+                                        width="1em"
+                                        height="1em"
+                                        fill="currentColor"
+                                        aria-hidden="true">
+                                    <path d="M882 272.1V144c0-17.7-14.3-32-32-32H174c-17.7 0-32 14.3-32 32v128.1c-16.7 1-30 14.9-30 31.9v131.7a177 177 0 0014.4 70.4c4.3 10.2 9.6 19.8 15.6 28.9v345c0 17.6 14.3 32 32 32h676c17.7 0 32-14.3 32-32V535a175 175 0 0015.6-28.9c9.5-22.3 14.4-46 14.4-70.4V304c0-17-13.3-30.9-30-31.9zM214 184h596v88H214v-88zm362 656.1H448V736h128v104.1zm234 0H640V704c0-17.7-14.3-32-32-32H416c-17.7 0-32 14.3-32 32v136.1H214V597.9c2.9 1.4 5.9 2.8 9 4 22.3 9.4 46 14.1 70.4 14.1s48-4.7 70.4-14.1c13.8-5.8 26.8-13.2 38.7-22.1.2-.1.4-.1.6 0a180.4 180.4 0 0038.7 22.1c22.3 9.4 46 14.1 70.4 14.1 24.4 0 48-4.7 70.4-14.1 13.8-5.8 26.8-13.2 38.7-22.1.2-.1.4-.1.6 0a180.4 180.4 0 0038.7 22.1c22.3 9.4 46 14.1 70.4 14.1 24.4 0 48-4.7 70.4-14.1 3-1.3 6-2.6 9-4v242.2zm30-404.4c0 59.8-49 108.3-109.3 108.3-40.8 0-76.4-22.1-95.2-54.9-2.9-5-8.1-8.1-13.9-8.1h-.6c-5.7 0-11 3.1-13.9 8.1A109.24 109.24 0 01512 544c-40.7 0-76.2-22-95-54.7-3-5.1-8.4-8.3-14.3-8.3s-11.4 3.2-14.3 8.3a109.63 109.63 0 01-95.1 54.7C233 544 184 495.5 184 435.7v-91.2c0-.3.2-.5.5-.5h655c.3 0 .5.2.5.5v91.2z"></path>
+                                    </svg>
+                                </span>
+
+                                <span class="ant-menu-title-content">Thông tin nhà bán</span>
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+                <section class="ant-layout container___dwZG8">
+                    <header class="ant-layout-header header___1UdUE">
+                        <div class="header___1Z92M">
+                            <span
+                                role="img"
+                                aria-label="menu-fold"
+                                tabindex="-1"
+                                class="anticon anticon-menu-fold trigger___BOOyT">
+                                <svg
+                                    viewbox="64 64 896 896"
+                                    focusable="false"
+                                    data-icon="menu-fold"
+                                    width="1em"
+                                    height="1em"
+                                    fill="currentColor"
+                                    aria-hidden="true">
+                                    <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 000 13.8z"></path>
+                                </svg>
+                            </span>
+                            <div class="right___2CMz5">
+                                <span class="action___3ut1O noticeButton___2tmwZ">
+                                    <span class="ant-badge">
+                                        <button
+                                            type="button"
+                                            class="ant-btn ant-btn-circle ant-btn-icon-only iconButton___1CLbk">
+                                            <span role="img" aria-label="bell" class="anticon anticon-bell icon___1g-4R">
+                                                <svg
+                                                    viewbox="64 64 896 896"
+                                                    focusable="false"
+                                                    data-icon="bell"
+                                                    width="1em"
+                                                    height="1em"
+                                                    fill="currentColor"
+                                                    aria-hidden="true">
+                                                    <path d="M816 768h-24V428c0-141.1-104.3-257.7-240-277.1V112c0-22.1-17.9-40-40-40s-40 17.9-40 40v38.9c-135.7 19.4-240 136-240 277.1v340h-24c-17.7 0-32 14.3-32 32v32c0 4.4 3.6 8 8 8h216c0 61.8 50.2 112 112 112s112-50.2 112-112h216c4.4 0 8-3.6 8-8v-32c0-17.7-14.3-32-32-32zM512 888c-26.5 0-48-21.5-48-48h96c0 26.5-21.5 48-48 48zM304 768V428c0-55.6 21.6-107.8 60.9-147.1S456.4 220 512 220c55.6 0 107.8 21.6 147.1 60.9S720 372.4 720 428v340H304z"></path>
+                                                </svg>
+                                            </span>
+                                        </button>
+                                    </span>
+                                </span>
+                    
+                                <div class="ant-dropdown-trigger action___3ut1O account___1r_Ku">
+                                    <div class="actionWrapper___3WzkZ">
+                                        <div class="accountWrapper___3buph borderWrapper___2pFiN">
+                                            <span class="ant-avatar ant-avatar-circle ant-avatar-image avatar___1Rx79">
+                                                <img src="https://salt.tikicdn.com/cache/w24/ts/sellercenterFE/93/76/03/2a08fa4ae6a024a752fbba87d145bce8.png" alt="avatar">
+                                            </span>
+                                            <span class="name___2eduw">duongtrungvinh99@gmail.com</span>
+                                            <span role="img" aria-label="down" class="anticon anticon-down userDownIcon___23v_k">
+                                                <svg
+                                                    viewbox="64 64 896 896"
+                                                    focusable="false"
+                                                    data-icon="down"
+                                                    width="1em"
+                                                    height="1em"
+                                                    fill="currentColor"
+                                                    aria-hidden="true">
+                                                    <path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                    <main class="ant-layout-content"></main>   
+                </section>
+            </section>
+        </div>
+    <div style="position: absolute; top: 0px; left: 0px; width: 100%;">
+    <div>
+        <div class="ant-dropdown ant-dropdown-placement-bottomLeft " style="min-width: 177px; left: 1050px; top: 64px; display:none">
+            <ul class="ant-dropdown-menu ant-dropdown-menu-root ant-dropdown-menu-vertical ant-dropdown-menu-light menu___3fMWW">
+                <li class="ant-dropdown-menu-item ant-dropdown-menu-item-only-child">
+                    <span class="ant-dropdown-menu-title-content">
+                        <div class="ant-row ant-row-no-wrap ant-row-top" style="margin-left: -3px; margin-right: -3px; row-gap: 0px;">
+                            <div class="ant-col avatarCol___1dghX" style="padding-left: 3px; padding-right: 3px;">
+                                <span class="ant-avatar ant-avatar-circle ant-avatar-image avatar___1Rx79">
+                                    <img src="https://salt.tikicdn.com/cache/w40/ts/sellercenterFE/93/76/03/2a08fa4ae6a024a752fbba87d145bce8.png"alt="avatar">
+                                </span>
+                                </div>
+                                <div class="ant-col" style="padding-left: 3px; padding-right: 3px;">
+                                    <div class="avatarUsername___2JI-4">dương trung vĩnh</div>
+                                    <span class="name___2eduw">duongtrungvinh99@gmail.com</span>
+                                </div>
+                            </div>
+                        </span>
+                    </li>
+                    <li class="ant-dropdown-menu-item ant-dropdown-menu-item-only-child">
+                            <a href="/new/#/profile/324364?source_screen=usermenu">
+                                <span role="img" aria-label="user" class="anticon anticon-user">
+                                    <svg
+                                        viewBox="64 64 896 896"
+                                        focusable="false"
+                                        data-icon="user"
+                                        width="1em"
+                                        height="1em"
+                                        fill="currentColor"
+                                        aria-hidden="true">
+                                        <path d="M858.5 763.6a374 374 0 00-80.6-119.5 375.63 375.63 0 00-119.5-80.6c-.4-.2-.8-.3-1.2-.5C719.5 518 760 444.7 760 362c0-137-111-248-248-248S264 225 264 362c0 82.7 40.5 156 102.8 201.1-.4.2-.8.3-1.2.5-44.8 18.9-85 46-119.5 80.6a375.63 375.63 0 00-80.6 119.5A371.7 371.7 0 00136 901.8a8 8 0 008 8.2h60c4.4 0 7.9-3.5 8-7.8 2-77.2 33-149.5 87.8-204.3 56.7-56.7 132-87.9 212.2-87.9s155.5 31.2 212.2 87.9C779 752.7 810 825 812 902.2c.1 4.4 3.6 7.8 8 7.8h60a8 8 0 008-8.2c-1-47.8-10.9-94.3-29.5-138.2zM512 534c-45.9 0-89.1-17.9-121.6-50.4S340 407.9 340 362c0-45.9 17.9-89.1 50.4-121.6S466.1 190 512 190s89.1 17.9 121.6 50.4S684 316.1 684 362c0 45.9-17.9 89.1-50.4 121.6S557.9 534 512 534z"></path>
+                                    </svg>
+                                </span>
+                                <span>Hồ sơ nhà bán</span>
+                            </a>
+                        </span>
+                    </li>
+                    <li class="ant-dropdown-menu-item ant-dropdown-menu-item-only-child">
+                        <span class="ant-dropdown-menu-title-content">
+                            <a href="/new/#/account-information/reset-password">
+                                <span role="img" aria-label="edit" class="anticon anticon-edit">
+                                    <svg
+                                        viewBox="64 64 896 896"
+                                        focusable="false"
+                                        data-icon="edit"
+                                        width="1em"
+                                        height="1em"
+                                        fill="currentColor"
+                                        aria-hidden="true">
+                                        <path d="M257.7 752c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 000-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 009.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9zm67.4-174.4L687.8 215l73.3 73.3-362.7 362.6-88.9 15.7 15.6-89zM880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32z"></path>
+                                    </svg>
+                                </span>
+                                <span>Thay đổi mật khẩu</span>
+                            </a>
+                        </span>
+                    </li>
+                    <li class="ant-dropdown-menu-item-divider"></li>
+                    <li class="ant-dropdown-menu-item">
+                        <span class="ant-dropdown-menu-title-content">
+                            <span role="img" aria-label="logout" class="anticon anticon-logout">
+                                <svg
+                                    viewBox="64 64 896 896"
+                                    focusable="false"
+                                    data-icon="logout"
+                                    width="1em"
+                                    height="1em"
+                                    fill="currentColor"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M868 732h-70.3c-4.8 0-9.3 2.1-12.3 5.8-7 8.5-14.5 16.7-22.4 24.5a353.84 353.84 0 01-112.7 75.9A352.8 352.8 0 01512.4 866c-47.9 0-94.3-9.4-137.9-27.8a353.84 353.84 0 01-112.7-75.9 353.28 353.28 0 01-76-112.5C167.3 606.2 158 559.9 158 512s9.4-94.2 27.8-137.8c17.8-42.1 43.4-80 76-112.5s70.5-58.1 112.7-75.9c43.6-18.4 90-27.8 137.9-27.8 47.9 0 94.3 9.3 137.9 27.8 42.2 17.8 80.1 43.4 112.7 75.9 7.9 7.9 15.3 16.1 22.4 24.5 3 3.7 7.6 5.8 12.3 5.8H868c6.3 0 10.2-7 6.7-12.3C798 160.5 663.8 81.6 511.3 82 271.7 82.6 79.6 277.1 82 516.4 84.4 751.9 276.2 942 512.4 942c152.1 0 285.7-78.8 362.3-197.7 3.4-5.3-.4-12.3-6.7-12.3zm88.9-226.3L815 393.7c-5.3-4.2-13-.4-13 6.3v76H488c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h314v76c0 6.7 7.8 10.5 13 6.3l141.9-112a8 8 0 000-12.6z"></path>
+                                </svg>
+                            </span>
+                            <span>Đăng xuất</span>
+                        </span>
+                    </li>
+                </ul>
+                <div aria-hidden="true" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+        
+    <div>
+        <div class="ant-notification ant-notification-topRight" style="right: 0px; top: 24px; bottom: auto;">
+            <div></div>
+        </div>
+    </div>   
+</body>
+</html>

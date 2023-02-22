@@ -7,17 +7,17 @@ import org.springframework.stereotype.Component;
 
 import com.example.demo.model.ProductJsonAdd;
 import com.example.demo.model.ProductJsonDetail;
-import com.example.demo.model.ProductJsonList;
+import com.example.demo.model.ProductResponse;
 import com.example.demo.util.HttpBase;
 
 @Component("ProductService")
 public class ProductService {
 	
-	public List<ProductJsonList> getProductList() {
-		String httpUrl = "http://localhost:8888/tiki/api/product/getAll";
-		HttpBase<ProductJsonList[], ProductJsonList[]> httpBase = new HttpBase<ProductJsonList[], ProductJsonList[]>();
-		ProductJsonList[] productJsonList = httpBase.getFromAPI(httpUrl, ProductJsonList[].class);
-		List<ProductJsonList> results = Arrays.asList(productJsonList);
+	public List<ProductResponse> getProductList(int page, int limit) {
+		String httpUrl = String.format("http://localhost:8888/tiki/api/product/getAllProduct?page=%d&limit=%d",page, limit);
+		HttpBase<ProductResponse[], ProductResponse[]> httpBase = new HttpBase<ProductResponse[], ProductResponse[]>();
+		ProductResponse[] productJsonList = httpBase.getFromAPI(httpUrl, ProductResponse[].class);
+		List<ProductResponse> results = Arrays.asList(productJsonList);
 		return results;
 	}
 
