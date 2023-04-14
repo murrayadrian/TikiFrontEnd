@@ -1,0 +1,1490 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5" >
+    <head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="referrer" content="no-referrer-when-downgrade"/><meta
+        name="google-site-verification"
+        content="7GHar_W5H0cxQxHnW2L1Y6cEIgumXq2ohefKmZXOzT8"/><link
+        rel="icon"
+        type="image/png"
+        href="https://salt.tikicdn.com/media/upload/2018/12/03/0054c1410e38f1b9f3609c244974dd9c.png"
+        sizes="32x32"/><link
+        rel="icon"
+        type="image/png"
+        href="https://salt.tikicdn.com/media/upload/2018/12/03/8bd2f9756646e32ebb076b2f6b050380.png"
+        sizes="16x16"/><link rel="preconnect" href="https://connect.facebook.net"/>
+        <style></style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+         <script type="text/javascript" src="../static/js/order.js" th:src="@{/js/order.js}"></script>
+        <link
+            rel="preload"
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+            as="style"
+            onload="this.onload=null;this.rel='stylesheet'"/>
+        <style></style>
+        <style>
+            html {
+                font-family: Roboto,Helvetica,Arial,sans-serif;
+                font-size: 14px;
+                background-color: #efefef;
+            }
+        </style>
+
+    </script><meta charset="utf-8"/><meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/><link
+        href="https://frontend.tikicdn.com/_desktop-next/static/css/_sprite.css?v=20221170360EACThvuQ2E4h6wHsiqfk"
+        rel="stylesheet"
+        type="text/css"/>
+    <title>Thông tin thanh toán | Tiki</title><meta name="robots" content="noindex"/><meta name="next-head-count" content="5"/>
+    <noscript data-n-css=""></noscript>
+    <style data-styled="" data-styled-version="5.3.0">
+        html {
+            line-height: 1.15;
+            -webkit-text-size-adjust: 100%;
+        }
+        /*!sc*/
+        body {
+            margin: 0;
+        }
+        /*!sc*/
+        main {
+            display: block;
+        }
+        /*!sc*/
+        h1 {
+            font-size: 2em;
+            margin: 0.67em 0;
+        }
+        /*!sc*/
+        hr {
+            box-sizing: content-box;
+            height: 0;
+            overflow: visible;
+        }
+        /*!sc*/
+        pre {
+            font-family: monospace,monospace;
+            font-size: 1em;
+        }
+        /*!sc*/
+        a {
+            background-color: transparent;
+        }
+        /*!sc*/
+        abbr[title] {
+            border-bottom: none;
+            -webkit-text-decoration: underline;
+            text-decoration: underline;
+            -webkit-text-decoration: underline dotted;
+            text-decoration: underline dotted;
+        }
+        /*!sc*/
+        b,
+        strong {
+            font-weight: bolder;
+        }
+        /*!sc*/
+        code,
+        kbd,
+        samp {
+            font-family: monospace,monospace;
+            font-size: 1em;
+        }
+        /*!sc*/
+        small {
+            font-size: 80%;
+        }
+        /*!sc*/
+        sub,
+        sup {
+            font-size: 75%;
+            line-height: 0;
+            position: relative;
+            vertical-align: baseline;
+        }
+        /*!sc*/
+        sub {
+            bottom: -0.25em;
+        }
+        /*!sc*/
+        sup {
+            top: -0.5em;
+        }
+        /*!sc*/
+        img {
+            border-style: none;
+        }
+        /*!sc*/
+        button,
+        input,
+        optgroup,
+        select,
+        textarea {
+            font-family: inherit;
+            font-size: 100%;
+            line-height: 1.15;
+            margin: 0;
+        }
+        /*!sc*/
+        button,
+        input {
+            overflow: visible;
+        }
+        /*!sc*/
+        button,
+        select {
+            text-transform: none;
+        }
+
+        /*!sc*/
+        [type="button"]::-moz-focus-inner,
+        [type="reset"]::-moz-focus-inner,
+        [type="submit"]::-moz-focus-inner,
+        button::-moz-focus-inner {
+            border-style: none;
+            padding: 0;
+        }
+        /*!sc*/
+        [type="button"]:-moz-focusring,
+        [type="reset"]:-moz-focusring,
+        [type="submit"]:-moz-focusring,
+        button:-moz-focusring {
+            outline: 1px dotted ButtonText;
+        }
+        /*!sc*/
+        fieldset {
+            padding: 0.35em 0.75em 0.625em;
+        }
+        /*!sc*/
+        legend {
+            box-sizing: border-box;
+            color: inherit;
+            display: table;
+            max-width: 100%;
+            padding: 0;
+            white-space: normal;
+        }
+        /*!sc*/
+        progress {
+            vertical-align: baseline;
+        }
+        /*!sc*/
+        textarea {
+            overflow: auto;
+        }
+        /*!sc*/
+        [type="checkbox"],
+        [type="radio"] {
+            box-sizing: border-box;
+            padding: 0;
+        }
+        /*!sc*/
+        [type="number"]::-webkit-inner-spin-button,
+        [type="number"]::-webkit-outer-spin-button {
+            height: auto;
+        }
+
+        /*!sc*/
+        details {
+            display: block;
+        }
+        /*!sc*/
+        summary {
+            display: list-item;
+        }
+        /*!sc*/
+        template {
+            display: none;
+        }
+        /*!sc*/
+        [hidden] {
+            display: none;
+        }
+        /*!sc*/
+        data-styled.g4[id="sc-global-ecVvVt1"] {
+            content: "sc-global-ecVvVt1,";
+        }
+        /*!sc*/
+        .fWjUGo {
+            object-fit: contain;
+        }
+        /*!sc*/
+        data-styled.g18[id="WebpImg__StyledImg-sc-h3ozu8-0"] {
+            content: "fWjUGo,";
+        }
+        /*!sc*/
+        *,
+        *:after,
+        *:before {
+            box-sizing: border-box;
+        }
+        /*!sc*/
+        body {
+            overflow-x: hidden;
+        }
+        /*!sc*/
+        img {
+            max-width: 100%;
+        }
+        /*!sc*/
+        #snack-bar {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+        }
+        /*!sc*/
+        #snack-bar > div {
+            margin-top: 12px;
+        }
+        /*!sc*/
+        data-styled.g365[id="sc-global-DrhsH1"] {
+            content: "sc-global-DrhsH1,";
+        }
+        /*!sc*/
+        .server-loading {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background: white;
+            z-index: 999999;
+        }
+        /*!sc*/
+        html {
+            background-color: #F5F5FA;
+        }
+        /*!sc*/
+        html.async-hide body {
+            opacity: 0 !important;
+        }
+        /*!sc*/
+        a {
+            color: #0B74E5;
+            -webkit-text-decoration: none;
+            text-decoration: none;
+        }
+        /*!sc*/
+        a:hover {
+            opacity: 0.95;
+        }
+        /*!sc*/
+        p {
+            margin: 0 0 10px;
+        }
+        /*!sc*/
+        b,
+        strong {
+            font-weight: 500;
+        }
+        /*!sc*/
+        .icon {
+            display: inline-block;
+            vertical-align: middle;
+            background-repeat: no-repeat;
+            background-position: 0 0;
+        }
+        /*!sc*/
+        .icon.tikinow-15 {
+            width: 53px;
+            height: 15px;
+            background-image: url("https://frontend.tikicdn.com/_desktop-next/static/img/icons/tikinow/tiki-now-15.png");
+            background-size: 53px 15px;
+        }
+        /*!sc*/
+        @media (-webkit-min-device-pixel-ratio:1.5),(-webkit-min-device-pixel-ratio:2),(min-resolution:192dpi) {
+            .icon.tikinow-15 {
+                background-image: url("https://frontend.tikicdn.com/_desktop-next/static/img/icons/tikinow/tiki-now-15@2x.png");
+            }
+        }
+        /*!sc*/
+        .icon.tikinow-26 {
+            width: 91px;
+            height: 26px;
+            background-image: url("https://frontend.tikicdn.com/_desktop-next/static/img/icons/tikinow/tiki-now-26.png");
+            background-size: 91px 26px;
+        }
+        /*!sc*/
+        @media (-webkit-min-device-pixel-ratio:1.5),(-webkit-min-device-pixel-ratio:2),(min-resolution:192dpi) {
+            .icon.tikinow-26 {
+                background-image: url("https://frontend.tikicdn.com/_desktop-next/static/img/icons/tikinow/tiki-now-26@2x.png");
+            }
+        }
+        /*!sc*/
+        .icon.thumb-up {
+            width: 17px;
+            height: 17px;
+            background-image: url("https://frontend.tikicdn.com/_desktop-next/static/img/icons/thumb-up.png");
+            background-size: 17px 17px;
+        }
+        /*!sc*/
+        @media (-webkit-min-device-pixel-ratio:1.5),(-webkit-min-device-pixel-ratio:2),(min-resolution:192dpi) {
+            .icon.thumb-up {
+                background-image: url("https://frontend.tikicdn.com/_desktop-next/static/img/icons/thumb-up@2x.png");
+            }
+        }
+        /*!sc*/
+        .icon.thumb-up-3x {
+            width: 17px;
+            height: 17px;
+            background-image: url("https://frontend.tikicdn.com/_desktop-next/static/img/icons/thumb-up-2@3x.png");
+            background-size: 17px 17px;
+        }
+        /*!sc*/
+        .icon.reply-arrow {
+            width: 19px;
+            height: 16px;
+            background-image: url("https://frontend.tikicdn.com/_desktop-next/static/img/icons/reply-arrow.png");
+            background-size: 19px 16px;
+        }
+        /*!sc*/
+        @media (-webkit-min-device-pixel-ratio:1.5),(-webkit-min-device-pixel-ratio:2),(min-resolution:192dpi) {
+            .icon.reply-arrow {
+                background-image: url("https://frontend.tikicdn.com/_desktop-next/static/img/icons/reply-arrow@2x.png");
+            }
+        }
+        /*!sc*/
+        .icon.guarantee {
+            width: 16px;
+            height: 16px;
+            background-image: url("https://frontend.tikicdn.com/_desktop-next/static/img/icons/guarantee.png");
+            background-size: 16px 16px;
+        }
+        /*!sc*/
+        @media (-webkit-min-device-pixel-ratio:1.5),(-webkit-min-device-pixel-ratio:2),(min-resolution:192dpi) {
+            .icon.guarantee {
+                background-image: url("https://frontend.tikicdn.com/_desktop-next/static/img/icons/guarantee@2x.png");
+            }
+        }
+        /*!sc*/
+        .icon.flag-2x {
+            width: 14px;
+            height: 16px;
+            background-image: url("https://frontend.tikicdn.com/_desktop-next/static/img/icons/flag@2x.png");
+            background-size: 14px 16px;
+        }
+        /*!sc*/
+        .icon.warning-svg {
+            width: 16px;
+            height: 17px;
+            background-image: url("https://frontend.tikicdn.com/_desktop-next/static/img/icons/warning.svg");
+            background-size: 16px 17px;
+        }
+        /*!sc*/
+        .icon.prize {
+            width: 23px;
+            height: 24px;
+            background-image: url("https://frontend.tikicdn.com/_desktop-next/static/img/icons/prize.png");
+            background-size: 23px 24px;
+        }
+        /*!sc*/
+        @media (-webkit-min-device-pixel-ratio:1.5),(-webkit-min-device-pixel-ratio:2),(min-resolution:192dpi) {
+            .icon.prize {
+                background-image: url("https://frontend.tikicdn.com/_desktop-next/static/img/icons/prize@2x.png");
+            }
+        }
+        /*!sc*/
+        .tikicon.icon-bound {
+            width: 16px;
+            height: 16px;
+            background-image: url("https://frontend.tikicdn.com/_desktop-next/static/img/icons/bound.png");
+            background-size: 16px 16px;
+        }
+        /*!sc*/
+        @media (-webkit-min-device-pixel-ratio:1.5),(-webkit-min-device-pixel-ratio:2),(min-resolution:192dpi) {
+            .tikicon.icon-bound {
+                background-image: url("https://frontend.tikicdn.com/_desktop-next/static/img/icons/bound@2x.png");
+            }
+        }
+        /*!sc*/
+        .fade-loading-animated {
+            -webkit-animation-name: fadeLoading;
+            animation-name: fadeLoading;
+            -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+            -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+        }
+        /*!sc*/
+        @-webkit-keyframes fadeLoading {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.3;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        /*!sc*/
+        @keyframes fadeLoading {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.3;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        /*!sc*/
+        @-webkit-keyframes swing {
+            0% {
+                -webkit-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            50% {
+                -webkit-transform: rotate(20deg);
+                -ms-transform: rotate(20deg);
+                transform: rotate(20deg);
+            }
+            100% {
+                -webkit-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+        }
+        /*!sc*/
+        @keyframes swing {
+            0% {
+                -webkit-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            50% {
+                -webkit-transform: rotate(20deg);
+                -ms-transform: rotate(20deg);
+                transform: rotate(20deg);
+            }
+            100% {
+                -webkit-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+        }
+        /*!sc*/
+        data-styled.g366[id="sc-global-lowZDM1"] {
+            content: "sc-global-lowZDM1,";
+        }
+        /*!sc*/
+        .hfMLFx {
+            width: 1270px;
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        /*!sc*/
+        data-styled.g368[id="Container-sc-itwfbd-0"] {
+            content: "hfMLFx,";
+        }
+        /*!sc*/
+        .fQwniA {
+            background: #efefef;
+            background: linear-gradient(90deg, hsla(0,0%,74.5%,0.2) 25%, hsla(0,0%,50.6%,0.24) 37%, hsla(0,0%,74.5%,0.2) 63%);
+            background-size: 400% 100%;
+            -webkit-animation: fyBcSW 1.4s ease infinite;
+            animation: fyBcSW 1.4s ease infinite;
+        }
+        /*!sc*/
+        data-styled.g713[id="sc-jSFjdj"] {
+            content: "fQwniA,";
+        }
+        /*!sc*/
+        .iBrUcv {
+            background: #ffffff;
+            position: relative;
+            z-index: 1;
+        }
+        /*!sc*/
+        .iBrUcv .header-container {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-align-items: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            height: 100px;
+        }
+        /*!sc*/
+        .iBrUcv .logo {
+            -webkit-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-align-items: flex-end;
+            -webkit-box-align: flex-end;
+            -ms-flex-align: flex-end;
+            align-items: flex-end;
+        }
+        /*!sc*/
+        .iBrUcv .logo .divider {
+            width: 1px;
+            height: 32px;
+            background-color: #1A94FF;
+            margin: 0 16px;
+            display: block;
+        }
+        /*!sc*/
+        .iBrUcv .logo .title {
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 32px;
+            color: #1aa7ff;
+        }
+        /*!sc*/
+        .iBrUcv .progress {
+            -webkit-flex: 4;
+            -ms-flex: 4;
+            flex: 4;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+        }
+        /*!sc*/
+        .iBrUcv .hotline {
+            -webkit-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: end;
+            -webkit-justify-content: flex-end;
+            -ms-flex-pack: end;
+            justify-content: flex-end;
+            -webkit-align-items: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+        }
+        /*!sc*/
+        data-styled.g1151[id="styles__StyledHeader-sc-nrpddg-0"] {
+            content: "iBrUcv,";
+        }
+        /*!sc*/
+        .hEmICk {
+            background: #EBEBF0;
+            font-size: 11px;
+            line-height: 16px;
+            padding-top: 40px;
+            padding-bottom: 50px;
+        }
+        /*!sc*/
+        .hEmICk .terms-text {
+            margin-bottom: 4px;
+            color: #808089;
+        }
+        /*!sc*/
+        .hEmICk .terms {
+            margin-bottom: 0;
+            color: #38383D;
+        }
+        /*!sc*/
+        .hEmICk .terms i {
+            border: 1px solid #DDDDE3;
+        }
+        /*!sc*/
+        .hEmICk .terms a {
+            color: #000;
+            -webkit-text-decoration: none;
+            text-decoration: none;
+        }
+        /*!sc*/
+        .hEmICk .terms a:first-child {
+            padding-right: 12px;
+        }
+        /*!sc*/
+        .hEmICk .terms a:nth-child(n + 2) {
+            padding-right: 12px;
+            padding-left: 12px;
+        }
+        /*!sc*/
+        .hEmICk .copyright {
+            margin-top: 18px;
+            width: 100%;
+            margin-left: 0;
+            margin-bottom: 0;
+            color: #808089;
+        }
+        /*!sc*/
+        data-styled.g1153[id="styles__StyledFooter-sc-1586a9d-0"] {
+            content: "hEmICk,";
+        }
+        /*!sc*/
+        @-webkit-keyframes fyBcSW {
+            0% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0 50%;
+            }
+        }
+        /*!sc*/
+        @keyframes fyBcSW {
+            0% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0 50%;
+            }
+        }
+        /*!sc*/
+        data-styled.g1982[id="sc-keyframes-fyBcSW"] {
+            content: "fyBcSW,";
+        }
+        /*!sc*/
+        .bVA-DDf {
+            position: relative;
+            padding: 16px;
+            margin-bottom: 16px;
+            background-color: #ffffff;
+        }
+        /*!sc*/
+        data-styled.g2619[id="Section__Container-sc-r6ysni-0"] {
+            content: "bVA-DDf,";
+        }
+        /*!sc*/
+        .gmUIFl.gmUIFl {
+            border-radius: 4px;
+            margin-bottom: 12px;
+        }
+        /*!sc*/
+        data-styled.g4603[id="styles__SkeletonContainer-sc-vgfrvy-1"] {
+            content: "gmUIFl,";
+        }
+        /*!sc*/
+        .eLNiwO {
+            background: #F5F5FA !important;
+        }
+        /*!sc*/
+        data-styled.g4604[id="styles__StyledSkeleton-sc-vgfrvy-2"] {
+            content: "eLNiwO,";
+        }
+        /*!sc*/
+        .cJiyOE.cJiyOE {
+            border-radius: 4px;
+            margin-bottom: 12px;
+        }
+        /*!sc*/
+        data-styled.g4608[id="styles__SkeletonContainer-sc-skkjlt-3"] {
+            content: "cJiyOE,";
+        }
+        /*!sc*/
+        .cCKDtH {
+            background: #F5F5FA !important;
+        }
+        /*!sc*/
+        data-styled.g4609[id="styles__StyledSkeleton-sc-skkjlt-4"] {
+            content: "cCKDtH,";
+        }
+        /*!sc*/
+        .bSkntM {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: justify;
+            -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+        }
+        /*!sc*/
+        data-styled.g4785[id="styles__FlexRow-sc-1kbdasz-1"] {
+            content: "bSkntM,";
+        }
+        /*!sc*/
+        .dOhgPy.dOhgPy {
+            border-radius: 4px;
+            margin-bottom: 12px;
+        }
+        /*!sc*/
+        data-styled.g4788[id="styles__SkeletonContainer-sc-1kbdasz-4"] {
+            content: "dOhgPy,";
+        }
+        /*!sc*/
+        .jbaKj {
+            background: #F5F5FA !important;
+        }
+        /*!sc*/
+        data-styled.g4789[id="styles__StyledSkeleton-sc-1kbdasz-5"] {
+            content: "jbaKj,";
+        }
+        /*!sc*/
+        .elPTRG {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            min-height: calc(100vh - 260px);
+            padding-top: 20px;
+            padding-bottom: 80px;
+        }
+        /*!sc*/
+        .elPTRG .left {
+            width: 900px;
+            margin-right: 20px;
+        }
+        /*!sc*/
+        .elPTRG .right {
+            -webkit-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+        }
+        /*!sc*/
+        data-styled.g5344[id="styles__StyledContainer-sc-18s7dsx-0"] {
+            content: "elPTRG,";
+        }
+        /*!sc*/
+        .kHiIaR.kHiIaR {
+            background: #F5F5FA;
+        }
+        /*!sc*/
+        data-styled.g5345[id="styles__StyledSkeleton-sc-18s7dsx-1"] {
+            content: "kHiIaR,";
+        }
+        /*!sc*/
+        .gFNXjw .shipping-package {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            border: 1px solid #dddde3;
+            box-sizing: border-box;
+            border-radius: 12px 12px 0 0;
+            padding: 16px;
+        }
+        /*!sc*/
+        .gFNXjw .shipping-package .left {
+            width: 497px;
+            margin-right: 46px;
+        }
+        /*!sc*/
+        .gFNXjw .shipping-package .left .delivery-info {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: justify;
+            -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            margin-bottom: 16px;
+        }
+        /*!sc*/
+        .gFNXjw .shipping-package .left .item {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+        }
+        /*!sc*/
+        .gFNXjw .shipping-package .right {
+            -webkit-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+        }
+        /*!sc*/
+        data-styled.g5346[id="styles__ShippingPlanSkeleton-sc-18s7dsx-2"] {
+            content: "gFNXjw,";
+        }
+        /*!sc*/
+        .hSgxbK {
+            font-size: 14px;
+            line-height: 20px;
+            color: #808089;
+        }
+        /*!sc*/
+        data-styled.g5347[id="styles__TikiXuSkeleton-sc-18s7dsx-3"] {
+            content: "hSgxbK,";
+        }
+        /*!sc*/
+        .hxfKHe .method-item {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            margin-bottom: 40px;
+        }
+        /*!sc*/
+        .hxfKHe .promotion-grid {
+            width: 733px;
+            padding: 45px 16px 16px;
+            margin-left: 40px;
+            margin-bottom: 25px;
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: repeat(3,1fr);
+            background-color: #EBEBF0;
+        }
+        /*!sc*/
+        data-styled.g5348[id="styles__PaymentMethodSkeleton-sc-18s7dsx-4"] {
+            content: "hxfKHe,";
+        }
+        .guqnAw {
+            border-radius: 4px;
+        }
+        .bVA-DDf {
+            position: relative;
+            padding: 16px;
+            margin-bottom: 16px;
+            background-color: rgb(255, 255, 255);
+        }
+        .cjoJkw {
+            display: grid;
+            gap: 20px;
+        }
+        .fyhLrw {
+            width: 100%;
+            border-radius: 12px;
+            border: 1px solid rgb(221, 221, 227);
+            margin-top: 20px;
+            padding: 20px 16px 16px;
+            position: relative;
+            display: flex;
+            z-index: 0;
+        }
+        .giCRPo {
+            display: flex;
+            -webkit-box-align: center;
+            align-items: center;
+            font-size: 14px;
+            line-height: 20px;
+            color: rgb(7, 148, 73);
+            padding: 0 4px;
+            background-color: rgb(255, 255, 255);
+            position: absolute;
+            top: 0;
+            left: 12px;
+            transform: translateY(-50%);
+        }
+        .fyhLrw .left-content {
+            margin-right: 46px;
+            max-width: 482px;
+        }
+        .HEIyE {
+            display: flex;
+            padding: 12px 0;
+            -webkit-box-align: center;
+            align-items: center;
+        }
+        .HEIyE .item-icon {
+            margin-right: 8px;
+            flex-shrink: 0;
+            max-height: 48px;
+        }
+        .fyhLrw .right-content {
+    flex: 1 1 0%;
+}
+.isrDZd {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    background: rgb(245, 245, 250);
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+.isrDZd .fulfillment-icon {
+    flex-shrink: 0;
+    margin-right: 8px;
+}
+.isrDZd .fulfillment-text {
+    margin: 0px;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgb(128, 128, 137);
+}
+.cTGPxG.cTGPxG {
+    border-radius: 4px;
+    margin-bottom: 12px;
+}
+.cTGPxG {
+    font-size: 14px;
+    line-height: 20px;
+}
+.bVA-DDf {
+    position: relative;
+    padding: 16px;
+    background-color: rgb(255, 255, 255);
+}
+.cTGPxG .block-header {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+.cTGPxG .block-header__title {
+    color: rgb(128, 128, 137);
+    font-weight: normal;
+    margin: 0px;
+}
+a {
+    color: rgb(11, 116, 229);
+    text-decoration: none;
+}
+a {
+    background-color: transparent;
+}
+.cTGPxG .customer_info {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    color: rgb(56, 56, 61);
+    margin-bottom: 2px;
+    font-weight: 600;
+}
+.cTGPxG .customer_info p {
+    margin: 0px;
+    word-break: break-word;
+}
+.cTGPxG .customer_info p {
+    margin: 0px;
+    word-break: break-word;
+}
+.cTGPxG .customer_info__phone {
+    flex-shrink: 0;
+}
+.cTGPxG .customer_info i {
+    display: block;
+    width: 1px;
+    height: 20px;
+    background-color: rgb(235, 235, 240);
+    margin: 0px 8px;
+}
+.cTGPxG .address {
+    color: rgb(128, 128, 137);
+    font-weight: normal;
+}
+.cTGPxG .address__type--home {
+    color: rgb(0, 171, 86);
+    background-color: rgb(239, 255, 244);
+}
+.cTGPxG .address__type {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    padding: 0px 6px;
+    border-radius: 100px;
+    margin-right: 4px;
+    height: 18px;
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.cKJPhS.cKJPhS {
+    border-radius: 4px;
+    margin-bottom: 12px;
+    padding: 0px;
+}
+.bVA-DDf {
+    position: relative;
+    padding: 16px;
+    background-color: rgb(255, 255, 255);
+}
+.cKJPhS .block-header {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 16px;
+    border-bottom: 1px solid rgb(235, 235, 240);
+}
+
+.cKJPhS .block-header__sub-title {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.cKJPhS .block-header__title {
+    font-weight: 500;
+    color: rgb(56, 56, 61);
+    margin: 0px;
+}
+.block-header__nav{
+    color: rgb(11, 116, 229);
+    text-decoration: none;
+}
+.cKJPhS .block-header__sub-title .sub-title-text {
+    color: rgb(128, 128, 137);
+    font-weight: 400;
+    margin: 0px 4px 0px 0px;
+}
+.cKJPhS .block-header__sub-title .sub-title-link {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    color: rgb(11, 116, 229);
+    font-weight: 400;
+    margin: 0px;
+    cursor: pointer;
+}
+.cKJPhS .block-header__sub-title .sub-title-link__arrow {
+    transform: rotate(90deg);
+    transition-duration: 0.5s;
+}
+.eWlcNY {
+    padding: 8px 16px;
+    display: grid;
+    gap: 4px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.eWlcNY .summary-label {
+    color: rgb(128, 128, 137);
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.eWlcNY .summary-value {
+    color: rgb(56, 56, 61);
+}
+.cKJPhS .order-total {
+    padding: 8px 16px;
+}
+.cKJPhS .order-total__label {
+    font-size: 14px;
+    line-height: 20px;
+    color: rgb(56, 56, 61);
+}
+.cKJPhS .order-total__value {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.cKJPhS .order-total__total {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 32px;
+    color: rgb(255, 66, 78);
+}
+.cKJPhS .order-total__additional-text {
+    font-size: 12px;
+    line-height: 16px;
+    color: rgb(128, 128, 137);
+}
+.hHWBHK.hHWBHK {
+    margin: 0px 16px 16px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 66, 78);
+    border: none;
+}
+.hksmFU {
+    width: 100%;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    height: 44px;
+    background-color: rgb(255, 255, 255);
+    outline: 0px;
+    cursor: pointer;
+    border: 1px solid rgb(11, 116, 229);
+    color: rgb(11, 116, 229);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    border-radius: 4px;
+}
+.HEIyE .item-info__second-line {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+.HEIyE .item-info__price {
+    color: rgb(56, 56, 61);
+    font-weight: 500;
+}
+.HEIyE .item-info {
+    font-size: 14px;
+    line-height: 20px;
+    color: rgb(128, 128, 137);
+    flex: 1 1 0%;
+}
+.HEIyE .item-info__product-name {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+.HeMLl {
+    display: block;
+    max-height: 1000px;
+    transition: max-height 0.5s ease-in-out 0s;
+    overflow: hidden;
+}
+.HeMLl .list-container {
+    border-bottom: 1px solid rgb(235, 235, 240);
+    padding: 12px 16px;
+    font-size: 12px;
+    line-height: 16px;
+    margin-bottom: 12px;
+    display: grid;
+    gap: 4px;
+}
+.HeMLl .item-info {
+    margin-right: 8px;
+    display: flex;
+    align-items: flex-start;
+}
+.HeMLl .item-info__qty {
+    width: 30px;
+    margin-right: 8px;
+    font-weight: 500;
+    flex-shrink: 0;
+}
+.HeMLl .item-info__name {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    max-width: 156px;
+    font-weight: 400;
+}
+.HeMLl .item-price {
+    font-weight: 500;
+    flex-shrink: 0;
+}
+.cKJPhS .block-header__sub-title {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.jUvIZj .block-header__title {
+    font-weight: 500;
+    color: rgb(56, 56, 61);
+    margin: 0px;
+}
+.jUvIZj .order-total__additional-text {
+    font-size: 12px;
+    line-height: 16px;
+    color: rgb(128, 128, 137);
+}
+.jUvIZj .block-header {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 16px;
+    border-bottom: 1px solid rgb(235, 235, 240);
+}
+.jUvIZj .block-header__sub-title {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.jUvIZj .block-header__sub-title .sub-title-text {
+    color: rgb(128, 128, 137);
+    font-weight: 400;
+    margin: 0px 4px 0px 0px;
+}
+.jUvIZj .block-header__sub-title .sub-title-link {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    color: rgb(11, 116, 229);
+    font-weight: 400;
+    margin: 0px;
+    cursor: pointer;
+}
+.jUvIZj .block-header__sub-title .sub-title-link__arrow {
+    transform: rotate(-90deg);
+    transition-duration: 0.5s;
+}
+.jUvIZj.jUvIZj {
+    border-radius: 4px;
+    margin-bottom: 12px;
+    padding: 0px;
+}
+.jUvIZj .order-total {
+    padding: 8px 16px;
+}
+.jUvIZj .order-total__label {
+    font-size: 14px;
+    line-height: 20px;
+    color: rgb(56, 56, 61);
+}
+.jUvIZj .order-total__value {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+    </style>
+</head>
+<body>
+    <div id="__next">
+        <div class="one-page">
+            <header class="styles__StyledHeader-sc-nrpddg-0 iBrUcv">
+                <div class="Container-sc-itwfbd-0 hfMLFx header-container">
+                    <div class="logo">
+                        <a href="/">
+                            <picture class="webpimg-container"><source
+                                type="image/webp"
+                                srcset="https://salt.tikicdn.com/ts/upload/1c/11/e6/d8211526b5bdc67aaaef2af9e8cf7dc8.png"/><img
+                                src="https://salt.tikicdn.com/ts/upload/1c/11/e6/d8211526b5bdc67aaaef2af9e8cf7dc8.png"
+                                alt="icon"
+                                width="60"
+                                height="40"
+                                srcset="https://salt.tikicdn.com/ts/upload/1c/11/e6/d8211526b5bdc67aaaef2af9e8cf7dc8.png"
+                                class="WebpImg__StyledImg-sc-h3ozu8-0 fWjUGo"/></picture>
+                        </a>
+                        <span class="divider"></span><span class="title">Thanh toán</span>
+                    </div>
+                    <div class="hotline">
+                        <a href="tel:1900-6035">
+                            <picture class="webpimg-container"><source
+                                type="image/webp"
+                                srcset="https://salt.tikicdn.com/ts/upload/ae/b1/ea/65e64a529e4ff888c875129d3b11ff29.png"/><img
+                                src="https://salt.tikicdn.com/ts/upload/ae/b1/ea/65e64a529e4ff888c875129d3b11ff29.png"
+                                alt="hotline"
+                                width="185"
+                                height="56"
+                                srcset="https://salt.tikicdn.com/ts/upload/ae/b1/ea/65e64a529e4ff888c875129d3b11ff29.png"
+                                class="WebpImg__StyledImg-sc-h3ozu8-0 fWjUGo"/></picture>
+                        </a>
+                    </div>
+                </div>
+            </header>
+            <main style="background:#F5F5FA">
+                <div
+                    class="Container-sc-itwfbd-0 styles__StyledContainer-sc-18s7dsx-0 hfMLFx elPTRG">
+                    <div class="styles__StyledNotification-sc-fvv62w-0 czPKDT"></div>
+                    <div class="left">
+                        <div
+                            class="Section__Container-sc-r6ysni-0 styles__StyledShippingPlan-sc-129168c-0 bVA-DDf guqnAw">
+                            <div class="styles__StyledShipments-sc-129168c-2 cjoJkw">
+                                <div class="styles__StyledShippingPackage-sc-hfzurk-0 fyhLrw">
+                                    <div class="PackageLeadTimestyles__NormalPackageLeadTime-sc-6boi18-0 giCRPo">
+                                        <div class="package-title"><img
+                                            width="24"
+                                            height="24"
+                                            alt="icon"
+                                            src="https://salt.tikicdn.com/ts/upload/ad/b7/93/7094a85d0b6d299f30ed89b03511deb9.png">Gói: Giao vào Thứ Năm, 24/11</div>
+                                    </div>
+                                    <div class="left-content">
+                                        <div class="package-item-list">
+                                            <!-- <div>
+                                                <div class="PackageItemListstyles__StyledPackageItem-sc-b42uex-0 HEIyE">
+                                                    <div class="item-icon">
+                                                        <picture class="webpimg-container"><source
+                                                            type="image/webp"
+                                                            srcset="https://salt.tikicdn.com/cache/96x96/ts/product/78/b9/f6/3a150df6e2a671bf41ccfff032294b74.jpg.webp"><img
+                                                            src="https://salt.tikicdn.com/cache/96x96/ts/product/78/b9/f6/3a150df6e2a671bf41ccfff032294b74.jpg"
+                                                            alt="icon"
+                                                            width="48"
+                                                            height="48"
+                                                            srcset="https://salt.tikicdn.com/cache/96x96/ts/product/78/b9/f6/3a150df6e2a671bf41ccfff032294b74.jpg"
+                                                            class="WebpImg__StyledImg-sc-h3ozu8-0 fWjUGo"></picture>
+                                                    </div>
+                                                    <div class="item-info">
+                                                        <div class="item-info__first-line">
+                                                            <span
+                                                                class="item-info__product-name"
+                                                                title="Điện Thoại Xiaomi Redmi Note 10S (8GB-128GB) - Hàng Chính Hãng - Xám (Gray)">Điện Thoại Xiaomi Redmi Note 10S (8GB-128GB) - Hàng Chính Hãng - Xám (Gray)</span></div>
+                                                        <div class="item-info__second-line">
+                                                            <div class="item-info__qty">SL: x1</div>
+                                                            <div class="item-info__price">4.710.000 ₫</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div> -->
+                                            <!-- <div>
+                                                <div class="PackageItemListstyles__StyledPackageItem-sc-b42uex-0 HEIyE">
+                                                    <div class="item-icon">
+                                                        <picture class="webpimg-container"><source
+                                                            type="image/webp"
+                                                            srcset="https://salt.tikicdn.com/cache/96x96/ts/product/90/55/ea/340eb77f1170e4c381c866c275138a82.jpg.webp"><img
+                                                            src="https://salt.tikicdn.com/cache/96x96/ts/product/90/55/ea/340eb77f1170e4c381c866c275138a82.jpg"
+                                                            alt="icon"
+                                                            width="48"
+                                                            height="48"
+                                                            srcset="https://salt.tikicdn.com/cache/96x96/ts/product/90/55/ea/340eb77f1170e4c381c866c275138a82.jpg"
+                                                            class="WebpImg__StyledImg-sc-h3ozu8-0 fWjUGo"></picture>
+                                                    </div>
+                                                    <div class="item-info">
+                                                        <div class="item-info__first-line">
+                                                            <span
+                                                                class="item-info__product-name"
+                                                                title="Tai nghe bluetooth nhét tai chống ồn cao cấp V5.0 chính hãng dùng cho iPhone Samsung OPPO VIVO HUAWEI XIAOMI tai nghe không dây - Hàng Chính Hãng PKCB">Tai
+                                                                nghe bluetooth nhét tai chống ồn cao cấp V5.0 chính hãng dùng cho iPhone Samsung
+                                                                OPPO VIVO HUAWEI XIAOMI tai nghe không dây - Hàng Chính Hãng PKCB</span></div>
+                                                        <div class="item-info__second-line">
+                                                            <div class="item-info__qty">SL: x1</div>
+                                                            <div class="item-info__price">290.000 ₫</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div> -->
+                                        </div>
+                                    </div>
+                                    <div class="right-content">
+                                        <div class="Fulfillmentstyles__StyledFulfillment-sc-wleoav-0 isrDZd">
+                                            <svg
+                                                class="fulfillment-icon"
+                                                width="24"
+                                                height="24"
+                                                viewbox="0 0 24 24"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    fill-rule="evenodd"
+                                                    clip-rule="evenodd"
+                                                    d="M3 4.5C3 4.08579 3.33579 3.75 3.75 3.75H10.5C10.9142 3.75 11.25 4.08579 11.25 4.5V6.75H16.5C16.8442 6.75 17.1441 6.98422 17.2276 7.3181L17.8939 9.98345L20.5854 11.3292C20.8395 11.4562 21 11.7159 21 12V16.5C21 16.9142 20.6642 17.25 20.25 17.25H17.25C17.25 18.9069 15.9069 20.25 14.25 20.25C12.5931 20.25 11.25 18.9069 11.25 17.25H10.5C10.0858 17.25 9.75 16.9142 9.75 16.5V5.25H3.75C3.33579 5.25 3 4.91421 3 4.5ZM12.8306 16.7635C12.834 16.7546 12.8372 16.7455 12.8402 16.7364C13.0499 16.1609 13.602 15.75 14.25 15.75C14.898 15.75 15.4501 16.1609 15.6598 16.7364C15.6628 16.7455 15.666 16.7546 15.6694 16.7635C15.7216 16.9161 15.75 17.0797 15.75 17.25C15.75 18.0784 15.0784 18.75 14.25 18.75C13.4216 18.75 12.75 18.0784 12.75 17.25C12.75 17.0797 12.7784 16.9161 12.8306 16.7635ZM16.8487 15.75C16.3299 14.8533 15.3604 14.25 14.25 14.25C13.1396 14.25 12.1701 14.8533 11.6513 15.75H11.25V8.25H15.9144L16.5224 10.6819C16.5755 10.8943 16.7188 11.0729 16.9146 11.1708L19.5 12.4635V15.75H16.8487ZM3 8.25C3 7.83579 3.33579 7.5 3.75 7.5H7.5C7.91421 7.5 8.25 7.83579 8.25 8.25C8.25 8.66421 7.91421 9 7.5 9H3.75C3.33579 9 3 8.66421 3 8.25ZM13.5 9C13.9142 9 14.25 9.33579 14.25 9.75V10.5H15C15.4142 10.5 15.75 10.8358 15.75 11.25C15.75 11.6642 15.4142 12 15 12H13.5C13.0858 12 12.75 11.6642 12.75 11.25V9.75C12.75 9.33579 13.0858 9 13.5 9ZM4.5 12C4.5 11.5858 4.83579 11.25 5.25 11.25H7.5C7.91421 11.25 8.25 11.5858 8.25 12C8.25 12.4142 7.91421 12.75 7.5 12.75H5.25C4.83579 12.75 4.5 12.4142 4.5 12ZM6 15.75C6 15.3358 6.33579 15 6.75 15H7.5C7.91421 15 8.25 15.3358 8.25 15.75C8.25 16.1642 7.91421 16.5 7.5 16.5H6.75C6.33579 16.5 6 16.1642 6 15.75Z"
+                                                    fill="#38383D"></path>
+                                            </svg>
+                                            <div>
+                                                <p class="fulfillment-text">Được giao bởi TikiNOW Smart Logistics (giao từ Hồ Chí Minh)</p>
+                                                <p class="fulfillment-text fulfillment-text--warning"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div
+                            class="flcp_container"
+                            style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAu4AAADIAQMAAACNufaLAAAAA1BMVEX///+nxBvIAAAAKUlEQVR42u3BAQ0AAADCIPunNsc3YAAAAAAAAAAAAAAAAAAAAAAAACQcSjgAAcybzv4AAAAASUVORK5CYII=&quot;); background-size: cover; border-radius: 4px;">
+                            <div
+                                class="Section__Container-sc-r6ysni-0 styles__StyledAddressBlock-sc-vgfrvy-0 bVA-DDf cTGPxG">
+                                <div class="block-header">
+                                    <h3 class="block-header__title">Giao tới</h3>
+                                    <a class="block-header__nav" href="/checkout/shipping">Thay đổi</a>
+                                </div>
+                                <div class="customer_info">
+                                    <p class="customer_info__name">Dương Trung Vĩnh</p>
+                                    <i></i>
+                                    <p class="customer_info__phone">0973192032</p>
+                                </div>
+                                <div class="address">
+                                    <span class="address__type address__type--home">Nhà</span>157, đường 265, Phường Hiệp Phú, Quận 9 - TP Thủ Đức, Hồ Chí Minh</div>
+                            </div>
+                        </div>
+                        <div
+                            class="Section__Container-sc-r6ysni-0 styles__StyledOrderSummary-sc-1kbdasz-0 bVA-DDf cKJPhS">
+                            <div class="block-header">
+                                <div class="styles__FlexRow-sc-1kbdasz-1 bSkntM" style="margin-bottom: 4px;">
+                                    <h3 class="block-header__title">Đơn hàng</h3>
+                                    <a class="block-header__nav" href="/cart/checkout">Thay đổi</a>
+                                </div>
+                                <div class="block-header__sub-title">
+                                    <p class="sub-title-text">2 sản phẩm.</p>
+                                    <p class="sub-title-link">Xem thông tin<svg
+                                        class="sub-title-link__arrow"
+                                        width="20"
+                                        height="20"
+                                        viewbox="0 0 24 24"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                fill-rule="evenodd"
+                                                clip-rule="evenodd"
+                                                d="M9.96967 8.46967C10.2626 8.17678 10.7374 8.17678 11.0303 8.46967L14.0303 11.4697C14.3232 11.7626 14.3232 12.2374 14.0303 12.5303L11.0303 15.5303C10.7374 15.8232 10.2626 15.8232 9.96967 15.5303C9.67678 15.2374 9.67678 14.7626 9.96967 14.4697L12.4393 12L9.96967 9.53033C9.67678 9.23744 9.67678 8.76256 9.96967 8.46967Z"
+                                                fill="#0B74E5"></path>
+                                        </svg>
+                                    </p>
+                                </div>
+                            </div>
+                            <!--cIdCpS => HeMLl !-->
+                            <div class="ItemListstyles__StyledItemList-sc-1syn9cx-0 cIdCpS" hidden>
+                                <div class="list-container">
+                                </div>
+                            </div>
+                            <div class="Summarystyles__StyledSummary-sc-12el0m-0 eWlcNY">
+                                <div class="styles__FlexRow-sc-1kbdasz-1 bSkntM">
+                                    <div class="summary-label">Tạm tính</div>
+                                    <div class="summary-value"></div>
+                                </div>
+                                <div class="styles__FlexRow-sc-1kbdasz-1 bSkntM">
+                                    <div class="summary-label">Phí vận chuyển</div>
+                                    <div class="summary-value">0đ</div>
+                                </div>
+                                <div class="styles__FlexRow-sc-1kbdasz-1 bSkntM">
+                                    <div class="summary-label">Khuyến mãi vận chuyển<svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="14"
+                                        height="14"
+                                        viewbox="0 0 24 24"
+                                        fill="none"
+                                        class="info-icon"
+                                        background="#ffffff"
+                                        aria-describedby="popup-21">
+                                            <path
+                                                d="M12.75 11.25C12.75 10.8358 12.4142 10.5 12 10.5C11.5858 10.5 11.25 10.8358 11.25 11.25V15.75C11.25 16.1642 11.5858 16.5 12 16.5C12.4142 16.5 12.75 16.1642 12.75 15.75V11.25Z"
+                                                fill="#808089"></path>
+                                            <path
+                                                d="M12.75 8.25C12.75 8.66421 12.4142 9 12 9C11.5858 9 11.25 8.66421 11.25 8.25C11.25 7.83579 11.5858 7.5 12 7.5C12.4142 7.5 12.75 7.83579 12.75 8.25Z"
+                                                fill="#808089"></path>
+                                            <path
+                                                fill-rule="evenodd"
+                                                clip-rule="evenodd"
+                                                d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM4.5 12C4.5 7.85786 7.85786 4.5 12 4.5C16.1421 4.5 19.5 7.85786 19.5 12C19.5 16.1421 16.1421 19.5 12 19.5C7.85786 19.5 4.5 16.1421 4.5 12Z"
+                                                fill="#808089"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="summary-value summary-value--positive">0đ</div>
+                                </div>
+                            </div>
+                            <div
+                                class="styles__Divider-sc-1kbdasz-2 jFlDlb"
+                                style="width: calc(100% - 32px);"></div>
+                            <div class="styles__FlexRow-sc-1kbdasz-1 bSkntM order-total">
+                                <div class="order-total__label">Tổng tiền</div>
+                                <div class="order-total__value">
+                                    <div class="order-total__total"></div>
+                                    <div class="order-total__additional-text">(Đã bao gồm VAT nếu có)</div>
+                                </div>
+                            </div>
+                            <div class="styles__FlexRow-sc-1kbdasz-1 bSkntM">
+                                <button
+                                    class="Button-sc-1p6a6mz-0 styles__StyledButton-sc-1kbdasz-3 hksmFU hHWBHK">Đặt hàng</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <span></span>
+            <footer class="styles__StyledFooter-sc-1586a9d-0 hEmICk">
+                <div class="Container-sc-itwfbd-0 hfMLFx">
+                    <p class="terms-text">Bằng việc tiến hành Đặt Mua, bạn đồng ý với các Điều kiện Giao dịch chung:</p>
+                    <p class="terms">
+                        <a href="https://tiki.vn/quy-che-hoat-dong-sgdtmdt" target="_blank">Quy chế hoạt động</a>
+                        <i></i>
+                        <a
+                            href="https://hotro.tiki.vn/s/article/chinh-sach-giai-quyet-khieu-nai"
+                            target="_blank">Chính sách giải quyết khiếu nại</a>
+                        <i></i>
+                        <a
+                            href="https://hotro.tiki.vn/s/article/chinh-sach-bao-hanh-tai-tiki-nhu-the-nao"
+                            target="_blank">Chính sách bảo hành</a>
+                        <i></i>
+                        <a href="https://tiki.vn/bao-mat-thanh-toan" target="_blank">Chính sách bảo mật thanh toán</a>
+                        <i></i>
+                        <a href="https://tiki.vn/bao-mat-thong-tin-ca-nhan" target="_blank">Chính sách bảo mật thông tin cá nhân</a>
+                    </p>
+                    <p class="copyright">© 2019 - Bản quyền của Công Ty Cổ Phần Ti Ki - Tiki.vn</p>
+                </div>
+            </footer>
+        </div>
+        <span></span>
+        <div id="portal"></div>
+
+    </div>
+</body>
+</html>

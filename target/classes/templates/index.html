@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html
+    xmlns:th="http://www.thymeleaf.org"
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+    <head>
+        <meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="referrer" content="no-referrer-when-downgrade"/><meta
+            name="google-site-verification"
+            content="7GHar_W5H0cxQxHnW2L1Y6cEIgumXq2ohefKmZXOzT8"/><link
+            rel="icon"
+            type="image/png"
+            href="https://salt.tikicdn.com/media/upload/2018/12/03/0054c1410e38f1b9f3609c244974dd9c.png"
+            sizes="32x32"/><link
+            rel="icon"
+            type="image/png"
+            href="https://salt.tikicdn.com/media/upload/2018/12/03/8bd2f9756646e32ebb076b2f6b050380.png"
+            sizes="16x16"/><link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <meta name="theme-color" content="#1A94FF"/>
+        <style></style>
+        <link
+            rel="stylesheet"
+            type="text/css"
+            media="all"
+            href="../static/css/index.css"
+            th:href="@{/css/index.css}"/>
+        <link
+            rel="preload"
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+            as="style"
+            onload="this.onload=null;this.rel='stylesheet'"/>
+        <style></style>
+        <style>
+            html {
+                font-family: Roboto,Helvetica,Arial,sans-serif;
+                font-size: 14px;
+                background-color: #efefef;
+            }
+        </style>
+        <meta charset="utf-8"/><meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/><link
+            href="https://frontend.tikicdn.com/_desktop-next/static/css/_sprite.css?v=20221184318ZrKvTV2l~9A2qpHjQA4zp"
+            rel="stylesheet"
+            type="text/css"/>
+        <title>Tiki - Mua hàng online giá tốt, hàng chuẩn, ship nhanh</title><meta
+            property="og:title"
+            content="Tiki - Mua hàng online giá tốt, hàng chuẩn, ship nhanh"/><meta
+            property="og:description"
+            content="Tiện lợi mua sắm hàng triệu mặt hàng, dịch vụ. Vô vàn ưu đãi freeship, mã giảm giá. Hoàn tiền 15% tối đa 600k/tháng với thẻ tín dụng TikiCARD."/><meta
+            name="description"
+            content="Tiện lợi mua sắm hàng triệu mặt hàng, dịch vụ. Vô vàn ưu đãi freeship, mã giảm giá. Hoàn tiền 15% tối đa 600k/tháng với thẻ tín dụng TikiCARD."/><link rel="canonical" href="https://tiki.vn"/>
+        <style>
+            html {
+                background: #f4f4f4;
+            }
+            .async-hide body {
+                opacity: 0 !important;
+            }
+        </style><meta name="next-head-count" content="10"/>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script
+            type="text/javascript"
+            src="../static/js/index.js"
+            th:src="@{/js/index.js}"></script>
+    </head>
+    <body>
+        <noscript>
+            <iframe
+                src="https://www.googletagmanager.com/ns.html?id=GTM-KR9FQH"
+                height="0"
+                width="0"
+                style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <div id="__next">
+            <div class="home-page">
+                <header id="main-header" class="style__Header-sc-q53692-0 ebTvCC">
+                    <div class="Container-sc-itwfbd-0 hfMLFx">
+                        <div class="Middle__Wrap-sc-vop1h1-0 edlkEo">
+                            <div class="Middle__LeftContainer-sc-vop1h1-1 hBRVdJ">
+                                <div class="logo-menu">
+                                    <div class="style__Logo-sc-3sdkaq-0 cWrfyT">
+                                        <a href="/" data-view-id="header_main_logo" class="tiki-logo"><img
+                                            src="https://salt.tikicdn.com/ts/upload/ae/f5/15/2228f38cf84d1b8451bb49e2c4537081.png"
+                                            alt="tiki-logo"/></a>
+                                    </div>
+                                </div>
+                                <div class="FormSearch__Root-sc-1fwg3wo-0 fPLoMu">
+                                    <div class="FormSearch__Form-sc-1fwg3wo-1 dPyAZH"><input
+                                        type="text"
+                                        data-view-id="main_search_form_input"
+                                        value=""
+                                        placeholder="Tìm sản phẩm, danh mục hay thương hiệu mong muốn ..."
+                                        class="FormSearch__Input-sc-1fwg3wo-2 gBxvSE"/>
+                                        <button
+                                            data-view-id="main_search_form_button"
+                                            class="FormSearch__Button-sc-1fwg3wo-3 bUpWwh"><img
+                                            class="icon-search"
+                                            src="https://salt.tikicdn.com/ts/upload/ed/5e/b8/8538366274240326978318348ea8af7c.png"/>Tìm Kiếm</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                data-view-id="header_user_shortcut"
+                                class="Userstyle__Root-sc-6e6am-0 lhUPfd">
+                                <div
+                                    data-view-id="header_header_account_container"
+                                    class="Userstyle__Item-sc-6e6am-1 cHRIKv"><img
+                                    class="profile-icon"
+                                    src="https://salt.tikicdn.com/ts/upload/67/de/1e/90e54b0a7a59948dd910ba50954c702e.png"/><span class="Userstyle__ItemText-sc-6e6am-3 kYZPng"><span class="Userstyle__NoWrap-sc-6e6am-12 gJAiTt">Đăng Nhập / Đăng Ký</span><span class="account-label"><span>Tài khoản</span><img
+                                    class="arrowIcon"
+                                    src="https://salt.tikicdn.com/ts/upload/d7/d4/a8/34939af2da1ceeeae9f95b7485784233.png"/></span>
+                                    </span>
+                                </div>
+                                <div class="Userstyle__CartItem-sc-6e6am-14 hfiWvr">
+                                    <a data-view-id="header_user_shortcut_cart" href="#" rel="nofollow">
+                                        <div
+                                            class="Userstyle__Item-sc-6e6am-1 Userstyle__CartItemInner-sc-6e6am-2 cHRIKv cucUum">
+                                            <div class="cart-wrapper"><img
+                                                class="cart-icon"
+                                                src="https://salt.tikicdn.com/ts/upload/40/44/6c/b80ad73e5e84aeb71c08e5d8d438eaa1.png"/>
+                                                <span class="Userstyle__ItemCartQty-sc-6e6am-5 ohfHv">0</span>
+                                            </div>
+                                            <span class="cart-text">Giỏ Hàng</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Bottom__Root-sc-azeq0g-0 fnCMyp">
+                        <div
+                            style="position:relative;display:flex;justify-content:space-between"
+                            class="Container-sc-itwfbd-0 hfMLFx">
+                            <a href="https://tiki.vn/sep/my-sep" style="position:absolute;top:0"><img
+                                src="https://salt.tikicdn.com/ts/brickv2og/70/07/62/9a90de2324bda05df7ff137972de1c70.png"
+                                alt="free-ship-badge"
+                                height="18"
+                                width="129"/></a>
+                            <div
+                                data-view-id="header_quicklinks_container"
+                                class="style__StyledHeaderKeyWords-sc-1tmiyrh-0 hgsBUf">
+                                <a
+                                    data-view-id="header_quicklinks_item"
+                                    data-view-index="0"
+                                    href="https://tiki.vn/tikingon/trai-cay/c44824">trái cây</a>
+                                <a
+                                    data-view-id="header_quicklinks_item"
+                                    data-view-index="1"
+                                    href="https://tiki.vn/tikingon/thit-trung/c54276">thịt, trứng</a>
+                                <a
+                                    data-view-id="header_quicklinks_item"
+                                    data-view-index="2"
+                                    href="https://tiki.vn/tikingon/rau-cu-qua/c54302">rau củ quả</a>
+                                <a
+                                    data-view-id="header_quicklinks_item"
+                                    data-view-index="3"
+                                    href="https://tiki.vn/tikingon/sua-bo-pho-mai/c54330">sữa, bơ, phô mai</a>
+                                <a
+                                    data-view-id="header_quicklinks_item"
+                                    data-view-index="4"
+                                    href="https://tiki.vn/tikingon/ca-thuy-hai-san/c54290">hải sản</a>
+                                <a
+                                    data-view-id="header_quicklinks_item"
+                                    data-view-index="5"
+                                    href="https://tiki.vn/tikingon/gao-mi-nong-san/c54384">gạo, mì ăn liền</a>
+                                <a
+                                    data-view-id="header_quicklinks_item"
+                                    data-view-index="6"
+                                    href="https://tiki.vn/tikingon/bia-do-uong/c54412">đồ uống, bia rượu</a>
+                                <a
+                                    data-view-id="header_quicklinks_item"
+                                    data-view-index="7"
+                                    href="https://tiki.vn/tikingon/banh-keo-gio-qua/c54452">bánh kẹo</a>
+                            </div>
+                            <a class="tiki-seller" href="/khuyen-mai/ban-hang-cung-tiki?src=desktop_header"><img
+                                class="icon"
+                                src="https://frontend.tikicdn.com/_desktop-next/static/img/icon-seller.svg"/>
+                                <span class="text">Bán hàng cùng Tiki</span>
+                            </a>
+                        </div>
+                    </div>
+                </header>
+                <main>
+                    <div class="style__StyledCategoryTabBarWrapper-sc-x9fskq-0 NNpEP">
+                        <div class="container">
+                            <div class="style__StyledSimpleSlider-sc-14im2m5-0 hcRNiQ">
+                                <span class="icon icon-prev disabled">
+                                    <i class="tikicon icon-arrow-back"></i>
+                                </span>
+                                <div class="content">
+                                    <span class="slider"></span>
+                                </div>
+                                <span class="icon icon-next ">
+                                    <i class="tikicon icon-arrow-back"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="Container-sc-itwfbd-0 hfMLFx home_banner_top"
+                        style="margin-top:15px;margin-bottom:15px;display:flex"
+                        data-view-id="home_banner_top_container">
+                        <div
+                            wrap="true"
+                            style="width:100%;justify-content:space-between"
+                            class="style__MainGrid-sc-c1zp66-0 czRNrr">
+                            <div
+                                width="824px"
+                                height="274px"
+                                style="position:relative"
+                                class="style__MainGrid-sc-c1zp66-0 cEvvCR">
+                                <picture style="position:absolute;z-index:0" class="webpimg-container"><source
+                                    type="image/webp"
+                                    srcset="https://salt.tikicdn.com/cache/w750/ts/banner/45/86/fc/966f4f9dc2684f476aa0868e4a13385b.png.webp 1x, https://salt.tikicdn.com/cache/w750/ts/banner/45/86/fc/966f4f9dc2684f476aa0868e4a13385b.png.webp 2x"/><img
+                                    style="width:824px;height:274px"
+                                    src="https://salt.tikicdn.com/ts/banner/45/86/fc/966f4f9dc2684f476aa0868e4a13385b.png"
+                                    srcset="https://salt.tikicdn.com/cache/w750/ts/banner/45/86/fc/966f4f9dc2684f476aa0868e4a13385b.png 1x, https://salt.tikicdn.com/cache/w750/ts/banner/45/86/fc/966f4f9dc2684f476aa0868e4a13385b.png 2x"
+                                    class="WebpImg__StyledImg-sc-h3ozu8-0 fWjUGo"/></picture>
+                                <div
+                                    data-view-id="home_banner_top_container"
+                                    class="Slide__Root-sc-msxn1i-0 irVCXl">
+                                    <div class="Slider__Wrapper-sc-pmvh7n-0 iTEXsX">
+                                        <div class="slick-slider home-top-slider slick-initialized" dir="ltr">
+                                            <a
+                                                data-view-id="home_banner_top.view.more"
+                                                data-view-index="1"
+                                                data-role="none"
+                                                class="slick-arrow slick-prev"
+                                                style="display:block"><img
+                                                class="slide-home-icon-prev"
+                                                src="https://salt.tikicdn.com/ts/upload/6b/59/c2/b61db5f1c32cfdc6d75e59d4fac2dbe8.png"/></a>
+                                            <div class="slick-list">
+                                                <div class="slick-track" style="width:2100%;left:-100%">
+                                                    <div
+                                                        data-index="-1"
+                                                        tabindex="-1"
+                                                        class="slick-slide slick-cloned"
+                                                        aria-hidden="true"
+                                                        style="width:4.761904761904762%"></div>
+                                                    <div
+                                                        data-index="0"
+                                                        class="slick-slide slick-active slick-current"
+                                                        tabindex="-1"
+                                                        aria-hidden="false"
+                                                        style="outline:none;width:4.761904761904762%">
+                                                        <div>
+                                                            <a
+                                                                class="home-top-slider-item"
+                                                                data-view-id="home_banner_top_item"
+                                                                data-view-index="0"
+                                                                href="https://tiki.vn/khuyen-mai/nhap-hoi-astra-dap-ga-mercedes?tmsx=044989ef-b78c-4fca-bfbf-3f74c575ce27"
+                                                                aria-label=""
+                                                                tabindex="-1"
+                                                                style="width:100%;display:inline-block">
+                                                                <picture class="webpimg-container"><source
+                                                                    type="image/webp"
+                                                                    srcset="https://salt.tikicdn.com/cache/w1080/ts/banner/45/86/fc/966f4f9dc2684f476aa0868e4a13385b.png.webp 1x, https://salt.tikicdn.com/cache/w1080/ts/banner/45/86/fc/966f4f9dc2684f476aa0868e4a13385b.png.webp 2x"/><img
+                                                                    style="width:824px;height:274px"
+                                                                    src="https://salt.tikicdn.com/ts/banner/45/86/fc/966f4f9dc2684f476aa0868e4a13385b.png"
+                                                                    srcset="https://salt.tikicdn.com/cache/w1080/ts/banner/45/86/fc/966f4f9dc2684f476aa0868e4a13385b.png 1x, https://salt.tikicdn.com/cache/w1080/ts/banner/45/86/fc/966f4f9dc2684f476aa0868e4a13385b.png 2x"
+                                                                    class="WebpImg__StyledImg-sc-h3ozu8-0 fWjUGo"/></picture>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        data-index="1"
+                                                        class="slick-slide"
+                                                        tabindex="-1"
+                                                        aria-hidden="true"
+                                                        style="outline:none;width:4.761904761904762%"></div>
+                                                    <div
+                                                        data-index="2"
+                                                        class="slick-slide"
+                                                        tabindex="-1"
+                                                        aria-hidden="true"
+                                                        style="outline:none;width:4.761904761904762%"></div>
+                                                    <div
+                                                        data-index="3"
+                                                        class="slick-slide"
+                                                        tabindex="-1"
+                                                        aria-hidden="true"
+                                                        style="outline:none;width:4.761904761904762%"></div>
+                                                    <div
+                                                        data-index="4"
+                                                        class="slick-slide"
+                                                        tabindex="-1"
+                                                        aria-hidden="true"
+                                                        style="outline:none;width:4.761904761904762%"></div>
+                                                    <div
+                                                        data-index="5"
+                                                        class="slick-slide"
+                                                        tabindex="-1"
+                                                        aria-hidden="true"
+                                                        style="outline:none;width:4.761904761904762%"></div>
+                                                    <div
+                                                        data-index="6"
+                                                        class="slick-slide"
+                                                        tabindex="-1"
+                                                        aria-hidden="true"
+                                                        style="outline:none;width:4.761904761904762%"></div>
+                                                    <div
+                                                        data-index="7"
+                                                        class="slick-slide"
+                                                        tabindex="-1"
+                                                        aria-hidden="true"
+                                                        style="outline:none;width:4.761904761904762%"></div>
+                                                    <div
+                                                        data-index="8"
+                                                        class="slick-slide"
+                                                        tabindex="-1"
+                                                        aria-hidden="true"
+                                                        style="outline:none;width:4.761904761904762%"></div>
+                                                    <div
+                                                        data-index="9"
+                                                        class="slick-slide"
+                                                        tabindex="-1"
+                                                        aria-hidden="true"
+                                                        style="outline:none;width:4.761904761904762%"></div>
+                                                    <div
+                                                        data-index="10"
+                                                        tabindex="-1"
+                                                        class="slick-slide slick-cloned"
+                                                        aria-hidden="true"
+                                                        style="width:4.761904761904762%">
+                                                        <div>
+                                                            <a
+                                                                class="home-top-slider-item"
+                                                                data-view-id="home_banner_top_item"
+                                                                data-view-index="0"
+                                                                href="https://tiki.vn/khuyen-mai/nhap-hoi-astra-dap-ga-mercedes?tmsx=044989ef-b78c-4fca-bfbf-3f74c575ce27"
+                                                                aria-label=""
+                                                                tabindex="-1"
+                                                                style="width:100%;display:inline-block">
+                                                                <picture class="webpimg-container"><source
+                                                                    type="image/webp"
+                                                                    srcset="https://salt.tikicdn.com/cache/w1080/ts/banner/45/86/fc/966f4f9dc2684f476aa0868e4a13385b.png.webp 1x, https://salt.tikicdn.com/cache/w1080/ts/banner/45/86/fc/966f4f9dc2684f476aa0868e4a13385b.png.webp 2x"/><img
+                                                                    style="width:824px;height:274px"
+                                                                    src="https://salt.tikicdn.com/ts/banner/45/86/fc/966f4f9dc2684f476aa0868e4a13385b.png"
+                                                                    srcset="https://salt.tikicdn.com/cache/w1080/ts/banner/45/86/fc/966f4f9dc2684f476aa0868e4a13385b.png 1x, https://salt.tikicdn.com/cache/w1080/ts/banner/45/86/fc/966f4f9dc2684f476aa0868e4a13385b.png 2x"
+                                                                    class="WebpImg__StyledImg-sc-h3ozu8-0 fWjUGo"/></picture>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        data-index="11"
+                                                        tabindex="-1"
+                                                        class="slick-slide slick-cloned"
+                                                        aria-hidden="true"
+                                                        style="width:4.761904761904762%"></div>
+                                                    <div
+                                                        data-index="12"
+                                                        tabindex="-1"
+                                                        class="slick-slide slick-cloned"
+                                                        aria-hidden="true"
+                                                        style="width:4.761904761904762%"></div>
+                                                    <div
+                                                        data-index="13"
+                                                        tabindex="-1"
+                                                        class="slick-slide slick-cloned"
+                                                        aria-hidden="true"
+                                                        style="width:4.761904761904762%"></div>
+                                                    <div
+                                                        data-index="14"
+                                                        tabindex="-1"
+                                                        class="slick-slide slick-cloned"
+                                                        aria-hidden="true"
+                                                        style="width:4.761904761904762%"></div>
+                                                    <div
+                                                        data-index="15"
+                                                        tabindex="-1"
+                                                        class="slick-slide slick-cloned"
+                                                        aria-hidden="true"
+                                                        style="width:4.761904761904762%"></div>
+                                                    <div
+                                                        data-index="16"
+                                                        tabindex="-1"
+                                                        class="slick-slide slick-cloned"
+                                                        aria-hidden="true"
+                                                        style="width:4.761904761904762%"></div>
+                                                    <div
+                                                        data-index="17"
+                                                        tabindex="-1"
+                                                        class="slick-slide slick-cloned"
+                                                        aria-hidden="true"
+                                                        style="width:4.761904761904762%"></div>
+                                                    <div
+                                                        data-index="18"
+                                                        tabindex="-1"
+                                                        class="slick-slide slick-cloned"
+                                                        aria-hidden="true"
+                                                        style="width:4.761904761904762%"></div>
+                                                    <div
+                                                        data-index="19"
+                                                        tabindex="-1"
+                                                        class="slick-slide slick-cloned"
+                                                        aria-hidden="true"
+                                                        style="width:4.761904761904762%"></div>
+                                                </div>
+                                            </div>
+                                            <a
+                                                data-view-id="home_banner_top.view.more"
+                                                data-view-index="0"
+                                                data-role="none"
+                                                class="slick-arrow slick-next"
+                                                style="display:block"><img
+                                                class="slide-home-icon-next"
+                                                src="https://salt.tikicdn.com/ts/upload/6b/59/c2/b61db5f1c32cfdc6d75e59d4fac2dbe8.png"/></a>
+                                            <ul class="slick-dots">
+                                                <li class="slick-active">
+                                                    <button>1</button>
+                                                </li>
+                                                <li class="">
+                                                    <button>2</button>
+                                                </li>
+                                                <li class="">
+                                                    <button>3</button>
+                                                </li>
+                                                <li class="">
+                                                    <button>4</button>
+                                                </li>
+                                                <li class="">
+                                                    <button>5</button>
+                                                </li>
+                                                <li class="">
+                                                    <button>6</button>
+                                                </li>
+                                                <li class="">
+                                                    <button>7</button>
+                                                </li>
+                                                <li class="">
+                                                    <button>8</button>
+                                                </li>
+                                                <li class="">
+                                                    <button>9</button>
+                                                </li>
+                                                <li class="">
+                                                    <button>10</button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                width="408px"
+                                height="274px"
+                                data-view-id="home_banner_top.right_container"
+                                class="style__MainGrid-sc-c1zp66-0 ldodXG"></div>
+                        </div>
+                    </div>
+                    <div
+                        class="Container-sc-itwfbd-0 hfMLFx home_deal_and_reward"
+                        style="margin-top:15px;margin-bottom:15px;display:flex">
+                        <div
+                            wrap="true"
+                            style="width:100%;justify-content:space-between"
+                            class="style__MainGrid-sc-1mpbxq7-0 QXzlE">
+                            <div data-view-id="home_deal" class="style__Wrapper-sc-jrvone-1 jDccwx"></div>
+                            <div class="styles__StyledRewardHubContainer-sc-110ws9n-1 nQygS"></div>
+                        </div>
+                    </div>
+                    <div class="Container-sc-itwfbd-0 hfMLFx home_brand">
+                        <div class="style__HomeBrandWrapper-sc-1mgaex0-0 ifHeXL">
+                            <a
+                                href="https://tiki.vn/astra-rewards/package-list?tmsx=328c9414-d56f-4fc9-a5d3-63e6b65f424f"
+                                data-view-id="home_banner_quick"
+                                class="side-brand">
+                                <picture class="webpimg-container"><source
+                                    type="image/webp"
+                                    srcset="https://salt.tikicdn.com/cache/w280/ts/banner/4d/be/26/e2a2fa9f11c1b08cd65865f2e751b3f6.png.webp 1x, https://salt.tikicdn.com/cache/w280/ts/banner/4d/be/26/e2a2fa9f11c1b08cd65865f2e751b3f6.png.webp 2x"/><img
+                                    src="https://salt.tikicdn.com/ts/banner/4d/be/26/e2a2fa9f11c1b08cd65865f2e751b3f6.png"
+                                    srcset="https://salt.tikicdn.com/cache/w280/ts/banner/4d/be/26/e2a2fa9f11c1b08cd65865f2e751b3f6.png 1x, https://salt.tikicdn.com/cache/w280/ts/banner/4d/be/26/e2a2fa9f11c1b08cd65865f2e751b3f6.png 2x"
+                                    class="WebpImg__StyledImg-sc-h3ozu8-0 fWjUGo"/></picture>
+                            </a>
+                            <a
+                                href="https://tiki.vn/live/v/126652?tmsx=98c9af89-5407-4a76-a5ec-1c243f936503"
+                                data-view-id="home_banner_quick"
+                                class="center-brand">
+                                <picture class="webpimg-container"><source
+                                    type="image/webp"
+                                    srcset="https://salt.tikicdn.com/cache/w1080/ts/banner/5a/25/9d/96c2deba5ba67d83f86c1f8ae6f22eae.png.webp 1x, https://salt.tikicdn.com/cache/w1080/ts/banner/5a/25/9d/96c2deba5ba67d83f86c1f8ae6f22eae.png.webp 2x"/><img
+                                    src="https://salt.tikicdn.com/ts/banner/5a/25/9d/96c2deba5ba67d83f86c1f8ae6f22eae.png"
+                                    srcset="https://salt.tikicdn.com/cache/w1080/ts/banner/5a/25/9d/96c2deba5ba67d83f86c1f8ae6f22eae.png 1x, https://salt.tikicdn.com/cache/w1080/ts/banner/5a/25/9d/96c2deba5ba67d83f86c1f8ae6f22eae.png 2x"
+                                    class="WebpImg__StyledImg-sc-h3ozu8-0 fWjUGo"/></picture>
+                            </a>
+                            <a
+                                href="https://tiki.vn/khuyen-mai/top-brands-thuong-them-astra?tmsx=17fec5a0-5f70-42f5-88fd-6f802be4f94c"
+                                data-view-id="home_banner_quick"
+                                class="side-brand">
+                                <picture class="webpimg-container"><source
+                                    type="image/webp"
+                                    srcset="https://salt.tikicdn.com/cache/w280/ts/banner/b3/99/5a/28381e0525a02b4e8a91535a5c254a0b.png.webp 1x, https://salt.tikicdn.com/cache/w280/ts/banner/b3/99/5a/28381e0525a02b4e8a91535a5c254a0b.png.webp 2x"/><img
+                                    src="https://salt.tikicdn.com/ts/banner/b3/99/5a/28381e0525a02b4e8a91535a5c254a0b.png"
+                                    srcset="https://salt.tikicdn.com/cache/w280/ts/banner/b3/99/5a/28381e0525a02b4e8a91535a5c254a0b.png 1x, https://salt.tikicdn.com/cache/w280/ts/banner/b3/99/5a/28381e0525a02b4e8a91535a5c254a0b.png 2x"
+                                    class="WebpImg__StyledImg-sc-h3ozu8-0 fWjUGo"/></picture>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="Container-sc-itwfbd-0 hfMLFx home_quicklinks_tab_container">
+                        <div
+                            data-view-id="home_quicklinks_tab_container"
+                            class="style__StyledIconWidgets-sc-zkcvo4-0 gAwztf">
+                            <a
+                                href="https://tiki.vn/khuyen-mai/sieu-hoi-astra?src=top_desktop_icon"
+                                class="item"
+                                data-view-id="home_quicklinks_tab_item"
+                                data-view-index="0">
+                                <picture class="webpimg-container"><source
+                                    type="image/webp"
+                                    srcset="https://salt.tikicdn.com/cache/w100/ts/upload/18/65/cd/c29e1b0b170a7a124ff299386b59fc92.png.webp 1x, https://salt.tikicdn.com/cache/w100/ts/upload/18/65/cd/c29e1b0b170a7a124ff299386b59fc92.png.webp 2x"/><img
+                                    style="width:48px;height:48px"
+                                    src="https://salt.tikicdn.com/ts/upload/18/65/cd/c29e1b0b170a7a124ff299386b59fc92.png"
+                                    class="WebpImg__StyledImg-sc-h3ozu8-0 fWjUGo thumb"
+                                    srcset="https://salt.tikicdn.com/cache/w100/ts/upload/18/65/cd/c29e1b0b170a7a124ff299386b59fc92.png 1x, https://salt.tikicdn.com/cache/w100/ts/upload/18/65/cd/c29e1b0b170a7a124ff299386b59fc92.png 2x"/></picture>
+                                <span>Siêu hội Astra</span>
+                            </a>
+                            <a
+                                href="https://exchange.tiki.vn?src=top_desktop_icon"
+                                class="item"
+                                data-view-id="home_quicklinks_tab_item"
+                                data-view-index="1">
+                                <picture class="webpimg-container"><source
+                                    type="image/webp"
+                                    srcset="https://salt.tikicdn.com/cache/w100/ts/upload/ff/20/4a/0a7c547424f2d976b6012179ed745819.png.webp 1x, https://salt.tikicdn.com/cache/w100/ts/upload/ff/20/4a/0a7c547424f2d976b6012179ed745819.png.webp 2x"/><img
+                                    style="width:48px;height:48px"
+                                    src="https://salt.tikicdn.com/ts/upload/ff/20/4a/0a7c547424f2d976b6012179ed745819.png"
+                                    class="WebpImg__StyledImg-sc-h3ozu8-0 fWjUGo thumb"
+                                    srcset="https://salt.tikicdn.com/cache/w100/ts/upload/ff/20/4a/0a7c547424f2d976b6012179ed745819.png 1x, https://salt.tikicdn.com/cache/w100/ts/upload/ff/20/4a/0a7c547424f2d976b6012179ed745819.png 2x"/></picture>
+                                <span>Tiki Exchange</span>
+                            </a>
+                            <a
+                                href="https://tiki.vn/khuyen-mai/top-brands-thuong-them-astra?src=top_app_icon"
+                                class="item"
+                                data-view-id="home_quicklinks_tab_item"
+                                data-view-index="2">
+                                <picture class="webpimg-container"><source
+                                    type="image/webp"
+                                    srcset="https://salt.tikicdn.com/cache/w100/ts/upload/b4/e8/d7/2ad7cd9c50a55d90bedc72c6104a2ee1.png.webp 1x, https://salt.tikicdn.com/cache/w100/ts/upload/b4/e8/d7/2ad7cd9c50a55d90bedc72c6104a2ee1.png.webp 2x"/><img
+                                    style="width:48px;height:48px"
+                                    src="https://salt.tikicdn.com/ts/upload/b4/e8/d7/2ad7cd9c50a55d90bedc72c6104a2ee1.png"
+                                    class="WebpImg__StyledImg-sc-h3ozu8-0 fWjUGo thumb"
+                                    srcset="https://salt.tikicdn.com/cache/w100/ts/upload/b4/e8/d7/2ad7cd9c50a55d90bedc72c6104a2ee1.png 1x, https://salt.tikicdn.com/cache/w100/ts/upload/b4/e8/d7/2ad7cd9c50a55d90bedc72c6104a2ee1.png 2x"/></picture>
+                                <span>Thưởng thêm Astra</span>
+                            </a>
+                            <a
+                                href="https://tiki.vn/tikingon?src=top_desktop_icon"
+                                class="item"
+                                data-view-id="home_quicklinks_tab_item"
+                                data-view-index="3">
+                                <picture class="webpimg-container"><source
+                                    type="image/webp"
+                                    srcset="https://salt.tikicdn.com/cache/w100/ts/upload/68/9c/2f/6fc82a9a9713a2c2b1968e9760879f6e.png.webp 1x, https://salt.tikicdn.com/cache/w100/ts/upload/68/9c/2f/6fc82a9a9713a2c2b1968e9760879f6e.png.webp 2x"/><img
+                                    style="width:48px;height:48px"
+                                    src="https://salt.tikicdn.com/ts/upload/68/9c/2f/6fc82a9a9713a2c2b1968e9760879f6e.png"
+                                    class="WebpImg__StyledImg-sc-h3ozu8-0 fWjUGo thumb"
+                                    srcset="https://salt.tikicdn.com/cache/w100/ts/upload/68/9c/2f/6fc82a9a9713a2c2b1968e9760879f6e.png 1x, https://salt.tikicdn.com/cache/w100/ts/upload/68/9c/2f/6fc82a9a9713a2c2b1968e9760879f6e.png 2x"/></picture>
+                                <span>Đi chợ siêu tốc</span>
+                            </a>
+                            <a
+                                href="https://tiki.vn/khuyen-mai/nhap-hoi-astra-dap-ga-mercedes?src=top_app_icon"
+                                class="item"
+                                data-view-id="home_quicklinks_tab_item"
+                                data-view-index="4">
+                                <picture class="webpimg-container"><source
+                                    type="image/webp"
+                                    srcset="https://salt.tikicdn.com/cache/w100/ts/upload/4a/71/64/7de7d35e452413161ce86c3100f29d45.png.webp 1x, https://salt.tikicdn.com/cache/w100/ts/upload/4a/71/64/7de7d35e452413161ce86c3100f29d45.png.webp 2x"/><img
+                                    style="width:48px;height:48px"
+                                    src="https://salt.tikicdn.com/ts/upload/4a/71/64/7de7d35e452413161ce86c3100f29d45.png"
+                                    class="WebpImg__StyledImg-sc-h3ozu8-0 fWjUGo thumb"
+                                    srcset="https://salt.tikicdn.com/cache/w100/ts/upload/4a/71/64/7de7d35e452413161ce86c3100f29d45.png 1x, https://salt.tikicdn.com/cache/w100/ts/upload/4a/71/64/7de7d35e452413161ce86c3100f29d45.png 2x"/></picture>
+                                <span>Trúng Mercedes C200</span>
+                            </a>
+                            <a
+                                href="https://tiki.vn/san-pham-so?src=top_desktop_icon"
+                                class="item"
+                                data-view-id="home_quicklinks_tab_item"
+                                data-view-index="5">
+                                <picture class="webpimg-container"><source
+                                    type="image/webp"
+                                    srcset="https://salt.tikicdn.com/cache/w100/ts/upload/73/e0/7d/af993bdbf150763f3352ffa79e6a7117.png.webp 1x, https://salt.tikicdn.com/cache/w100/ts/upload/73/e0/7d/af993bdbf150763f3352ffa79e6a7117.png.webp 2x"/><img
+                                    style="width:48px;height:48px"
+                                    src="https://salt.tikicdn.com/ts/upload/73/e0/7d/af993bdbf150763f3352ffa79e6a7117.png"
+                                    class="WebpImg__StyledImg-sc-h3ozu8-0 fWjUGo thumb"
+                                    srcset="https://salt.tikicdn.com/cache/w100/ts/upload/73/e0/7d/af993bdbf150763f3352ffa79e6a7117.png 1x, https://salt.tikicdn.com/cache/w100/ts/upload/73/e0/7d/af993bdbf150763f3352ffa79e6a7117.png 2x"/></picture>
+                                <span>Đóng tiền, nạp thẻ</span>
+                            </a>
+                            <a
+                                href="https://tiki.vn/khuyen-mai/ma-giam-gia?src=top_desktop_icon"
+                                class="item"
+                                data-view-id="home_quicklinks_tab_item"
+                                data-view-index="6">
+                                <picture class="webpimg-container"><source
+                                    type="image/webp"
+                                    srcset="https://salt.tikicdn.com/cache/w100/ts/upload/73/50/e1/83afc85db37c472de60ebef6eceb41a7.png.webp 1x, https://salt.tikicdn.com/cache/w100/ts/upload/73/50/e1/83afc85db37c472de60ebef6eceb41a7.png.webp 2x"/><img
+                                    style="width:48px;height:48px"
+                                    src="https://salt.tikicdn.com/ts/upload/73/50/e1/83afc85db37c472de60ebef6eceb41a7.png"
+                                    class="WebpImg__StyledImg-sc-h3ozu8-0 fWjUGo thumb"
+                                    srcset="https://salt.tikicdn.com/cache/w100/ts/upload/73/50/e1/83afc85db37c472de60ebef6eceb41a7.png 1x, https://salt.tikicdn.com/cache/w100/ts/upload/73/50/e1/83afc85db37c472de60ebef6eceb41a7.png 2x"/></picture>
+                                <span>Mã giảm giá</span>
+                            </a>
+                            <a
+                                href="https://tiki.vn/bao-hiem-so?src=top_desktop_icon"
+                                class="item"
+                                data-view-id="home_quicklinks_tab_item"
+                                data-view-index="7">
+                                <picture class="webpimg-container"><source
+                                    type="image/webp"
+                                    srcset="https://salt.tikicdn.com/cache/w100/ts/upload/ef/ae/82/f40611ad6dfc68a0d26451582a65102f.png.webp 1x, https://salt.tikicdn.com/cache/w100/ts/upload/ef/ae/82/f40611ad6dfc68a0d26451582a65102f.png.webp 2x"/><img
+                                    style="width:48px;height:48px"
+                                    src="https://salt.tikicdn.com/ts/upload/ef/ae/82/f40611ad6dfc68a0d26451582a65102f.png"
+                                    class="WebpImg__StyledImg-sc-h3ozu8-0 fWjUGo thumb"
+                                    srcset="https://salt.tikicdn.com/cache/w100/ts/upload/ef/ae/82/f40611ad6dfc68a0d26451582a65102f.png 1x, https://salt.tikicdn.com/cache/w100/ts/upload/ef/ae/82/f40611ad6dfc68a0d26451582a65102f.png 2x"/></picture>
+                                <span>Bảo hiểm Tiki360</span>
+                            </a>
+                            <a
+                                href="https://tiki.vn/khuyen-mai/dac-quyen-thanh-vien-tiki-club?src=top_desktop_icon"
+                                class="item"
+                                data-view-id="home_quicklinks_tab_item"
+                                data-view-index="8">
+                                <picture class="webpimg-container"><source
+                                    type="image/webp"
+                                    srcset="https://salt.tikicdn.com/cache/w100/ts/upload/99/29/ff/cea178635fd5a24ad01617cae66c065c.png.webp 1x, https://salt.tikicdn.com/cache/w100/ts/upload/99/29/ff/cea178635fd5a24ad01617cae66c065c.png.webp 2x"/><img
+                                    style="width:48px;height:48px"
+                                    src="https://salt.tikicdn.com/ts/upload/99/29/ff/cea178635fd5a24ad01617cae66c065c.png"
+                                    class="WebpImg__StyledImg-sc-h3ozu8-0 fWjUGo thumb"
+                                    srcset="https://salt.tikicdn.com/cache/w100/ts/upload/99/29/ff/cea178635fd5a24ad01617cae66c065c.png 1x, https://salt.tikicdn.com/cache/w100/ts/upload/99/29/ff/cea178635fd5a24ad01617cae66c065c.png 2x"/></picture>
+                                <span>Giảm đến 50%</span>
+                            </a>
+                            <a
+                                href="https://tiki.vn/khuyen-mai/mo-the-tikicard?src=top_desktop_icon"
+                                class="item"
+                                data-view-id="home_quicklinks_tab_item"
+                                data-view-index="9">
+                                <picture class="webpimg-container"><source
+                                    type="image/webp"
+                                    srcset="https://salt.tikicdn.com/cache/w100/ts/upload/52/50/73/0788d5207ec8b82e05859dfe953a4327.png.webp 1x, https://salt.tikicdn.com/cache/w100/ts/upload/52/50/73/0788d5207ec8b82e05859dfe953a4327.png.webp 2x"/><img
+                                    style="width:48px;height:48px"
+                                    src="https://salt.tikicdn.com/ts/upload/52/50/73/0788d5207ec8b82e05859dfe953a4327.png"
+                                    class="WebpImg__StyledImg-sc-h3ozu8-0 fWjUGo thumb"
+                                    srcset="https://salt.tikicdn.com/cache/w100/ts/upload/52/50/73/0788d5207ec8b82e05859dfe953a4327.png 1x, https://salt.tikicdn.com/cache/w100/ts/upload/52/50/73/0788d5207ec8b82e05859dfe953a4327.png 2x"/></picture>
+                                <span>Hoàn tiền 15%</span>
+                            </a>
+                            <a
+                                href="https://tiki.vn/khuyen-mai/uu-dai-doi-tac?src=top_desktop_icon"
+                                class="item"
+                                data-view-id="home_quicklinks_tab_item"
+                                data-view-index="10">
+                                <picture class="webpimg-container"><source
+                                    type="image/webp"
+                                    srcset="https://salt.tikicdn.com/cache/w100/ts/upload/4a/b2/c5/b388ee0e511889c83fab1217608fe82f.png.webp 1x, https://salt.tikicdn.com/cache/w100/ts/upload/4a/b2/c5/b388ee0e511889c83fab1217608fe82f.png.webp 2x"/><img
+                                    style="width:48px;height:48px"
+                                    src="https://salt.tikicdn.com/ts/upload/4a/b2/c5/b388ee0e511889c83fab1217608fe82f.png"
+                                    class="WebpImg__StyledImg-sc-h3ozu8-0 fWjUGo thumb"
+                                    srcset="https://salt.tikicdn.com/cache/w100/ts/upload/4a/b2/c5/b388ee0e511889c83fab1217608fe82f.png 1x, https://salt.tikicdn.com/cache/w100/ts/upload/4a/b2/c5/b388ee0e511889c83fab1217608fe82f.png 2x"/></picture>
+                                <span>Ưu đãi thanh toán</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="Container-sc-itwfbd-0 hfMLFx infinite_scroll">
+                        <div class="style__StyledInfiniteScrollWidget-sc-89j3qn-2 cMnFhK">
+                           
+                            <div
+                                data-view-id="home_infinity_tab_content"
+                                class="style__StyledInfiniteScroll-sc-r7dr5o-0 LAgNu">
+                                <div class="content">
+                                </div>
+                                <a
+                                    class="style__Wrapper-sc-hf75l8-0 edMTAk view-more"
+                                    data-view-id="home_infinity_view.more">Xem Thêm</a>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+
+                <span></span></div>
+            <span></span>
+            <div id="portal"></div>
+        </div>
+
+        <div id="snackbar-root"></div>
+        <div id="snack-bar"></div>
+    </body>
+</html>

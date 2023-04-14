@@ -1,0 +1,1879 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5" >
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+        <meta name="referrer" content="no-referrer-when-downgrade"/>
+        <meta
+            name="google-site-verification"
+            content="7GHar_W5H0cxQxHnW2L1Y6cEIgumXq2ohefKmZXOzT8"/>
+        <link
+            rel="icon"
+            type="image/png"
+            href="https://salt.tikicdn.com/media/upload/2018/12/03/0054c1410e38f1b9f3609c244974dd9c.png"
+            sizes="32x32"/>
+        <link
+            rel="icon"
+            type="image/png"
+            href="https://salt.tikicdn.com/media/upload/2018/12/03/8bd2f9756646e32ebb076b2f6b050380.png"
+            sizes="16x16"/>
+    
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com"/>
+        
+        <meta name="theme-color" content="#1A94FF"/>
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+         <script type="text/javascript" src="../static/js/cart.js" th:src="@{/js/cart.js}"></script>
+        <style></style>
+        <link
+            rel="preload"
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+            as="style"
+            onload="this.onload=null;this.rel='stylesheet'"/>
+        <style></style>
+        <style>
+            html {
+                font-family: Roboto, Helvetica, Arial, sans-serif;
+                font-size: 14px;
+                background-color: #efefef;
+            }
+        </style>
+     
+        <meta charset="utf-8"/>
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+        <meta
+            name="description"
+            content="Thỏa sức mua sắm qua mạng hàng ngàn mặt hàng sách, điện tử, đồ gia dụng, quà tặng, thời trang, làm đẹp &amp; sức khỏe tại Tiki với giá rẻ hơn và khuyến mãi hấp dẫn"/>
+        <link
+            href="https://frontend.tikicdn.com/_desktop-next/static/css/_sprite.css?v=20221118358ipLYWxAV46So5xUNxvx8b"
+            rel="stylesheet"
+            type="text/css"/>
+        <title>Giỏ hàng | Tiki.vn</title>
+        <meta name="next-head-count" content="5"/>
+        
+       
+        <style data-styled="" data-styled-version="5.3.0">
+            html {
+                line-height: 1.15;
+                -webkit-text-size-adjust: 100%;
+            }
+            /*!sc*/
+            body {
+                margin: 0;
+            }
+            /*!sc*/
+            main {
+                display: block;
+            }
+            /*!sc*/
+            h1 {
+                font-size: 2em;
+                margin: 0.67em 0;
+            }
+
+            .iRKLRb {
+                background: rgb(255, 255, 255);
+                border-radius: 4px;
+                padding-bottom: 8px;
+            }
+
+            .iRKLRb .prices__items {
+                list-style: none;
+                margin: 0;
+                padding: 17px 20px;
+                border-bottom: 1px solid rgb(244, 244, 244);
+            }
+
+            .iRKLRb .prices__item {
+                display: flex;
+                flex-wrap: nowrap;
+                -webkit-box-pack: justify;
+                justify-content: space-between;
+                margin-bottom: 10px;
+            }
+
+            .iRKLRb .prices__text {
+                font-weight: 300;
+                color: rgb(51, 51, 51);
+                display: inline-block;
+            }
+
+            .iRKLRb .prices__total {
+                padding: 17px 20px;
+                display: flex;
+                flex-wrap: nowrap;
+                -webkit-box-pack: justify;
+                justify-content: space-between;
+                margin: 0;
+            }
+
+            .iRKLRb .prices__text {
+                font-weight: 300;
+                color: rgb(51, 51, 51);
+                display: inline-block;
+            }
+
+            .iRKLRb .prices__content {
+                text-align: right;
+            }
+
+            .iRKLRb .prices__value--final {
+                color: rgb(254, 56, 52);
+                font-size: 22px;
+                font-weight: 400;
+                text-align: right;
+            }
+
+            .iRKLRb .prices__value--noted {
+                font-weight: 300;
+                font-style: normal;
+                display: block;
+                font-size: 12px;
+                color: rgb(51, 51, 51);
+                margin-top: 3px;
+            }
+
+            .kJwXxa .sellers__sub-title {
+                display: block;
+                margin-bottom: 10px;
+            }
+
+            .kJwXxa .sellers__icon-home {
+                width: 15px;
+                height: 15px;
+                display: inline-block;
+                margin-right: 5px;
+                position: relative;
+                top: 2px;
+            }
+
+            .kJwXxa {
+                background: rgb(255, 255, 255);
+                border-radius: 4px;
+                margin-bottom: 10px;
+            }
+
+            .kJwXxa .sellers__group {
+                padding: 19px 16px 0;
+            }
+
+            .jKLiJX {
+                background: rgb(255, 255, 255);
+                padding: 9px 16px;
+                border-radius: 4px;
+                color: rgb(36, 36, 36);
+                font-weight: 400;
+                font-size: 13px;
+                margin-bottom: 12px;
+                position: sticky;
+                top: 20px;
+                z-index: 99;
+                display: grid;
+                grid-template-columns: 398px 190px 130px 130px 30px;
+                -webkit-box-align: center;
+                align-items: center;
+            }
+
+            .jKLiJX::before {
+                content: "";
+                background: rgb(245, 245, 250);
+                width: 100%;
+                height: 20px;
+                position: absolute;
+                left: 0;
+                top: -20px;
+                right: 0;
+            }
+
+            .hNjxWW input[type="checkbox"] {
+                position: absolute;
+                height: 1px;
+                width: 1px;
+                visibility: hidden;
+                clip: rect(0px, 0px, 0px, 0px);
+                opacity: 0;
+            }
+
+            button,
+            input {
+                overflow: visible;
+            }
+
+            .hNjxWW .checkbox-fake {
+                width: 18px;
+                height: 18px;
+                border: 1px solid rgb(196, 196, 207);
+                border-radius: 4px;
+                display: inline-block;
+                vertical-align: middle;
+                margin: 0 12px 0 0;
+                position: relative;
+                z-index: 1;
+                color: rgb(196, 196, 207);
+                background: transparent;
+                cursor: pointer;
+            }
+
+            .hNjxWW .checkbox-fake::before {
+                content: "";
+                display: block;
+                position: absolute;
+                left: 2px;
+                top: 3px;
+                width: 12px;
+                height: 6px;
+                border-left: 2px solid rgb(255, 255, 255);
+                border-bottom: 2px solid rgb(255, 255, 255);
+                transform: scale(0) rotate(-45deg);
+                transition: transform 0.3s ease 0s;
+            }
+
+            .checkbox-fake.special:before{
+                transform: scale(1) rotate(-45deg);
+            }
+
+            .hNjxWW {
+                display: inline-block;
+            }
+            /*!sc*/
+            hr {
+                box-sizing: content-box;
+                height: 0;
+                overflow: visible;
+            }
+            /*!sc*/
+            pre {
+                font-family: monospace, monospace;
+                font-size: 1em;
+            }
+            /*!sc*/
+            a {
+                background-color: transparent;
+            }
+            /*!sc*/
+            abbr[title] {
+                border-bottom: none;
+                -webkit-text-decoration: underline;
+                text-decoration: underline;
+                -webkit-text-decoration: underline dotted;
+                text-decoration: underline dotted;
+            }
+            /*!sc*/
+            b,
+            strong {
+                font-weight: bolder;
+            }
+            /*!sc*/
+            code,
+            kbd,
+            samp {
+                font-family: monospace, monospace;
+                font-size: 1em;
+            }
+            /*!sc*/
+            small {
+                font-size: 80%;
+            }
+            /*!sc*/
+            sub,
+            sup {
+                font-size: 75%;
+                line-height: 0;
+                position: relative;
+                vertical-align: baseline;
+            }
+            /*!sc*/
+            sub {
+                bottom: -0.25em;
+            }
+
+            /*!sc*/
+            sup {
+                top: -0.5em;
+            }
+            /*!sc*/
+            img {
+                border-style: none;
+            }
+            /*!sc*/
+            button,
+            input,
+            optgroup,
+            select,
+            textarea {
+                font-family: inherit;
+                font-size: 100%;
+                line-height: 1.15;
+                margin: 0;
+            }
+            /*!sc*/
+            button,
+            input {
+                overflow: visible;
+            }
+            /*!sc*/
+            button,
+            select {
+                text-transform: none;
+            }
+
+            .eEhtFa {
+                flex: 1 1 calc(100% - 925px);
+                margin-left: 20px;
+                display: block;
+            }
+
+            .eEhtFa .right-inner {
+                position: sticky;
+                top: 20px;
+            }
+
+            .cTGPxG.cTGPxG {
+                border-radius: 4px;
+                margin-bottom: 12px;
+            }
+
+            .cTGPxG .block-header {
+                display: flex;
+                -webkit-box-align: center;
+                align-items: center;
+                -webkit-box-pack: justify;
+                justify-content: space-between;
+                margin-bottom: 12px;
+            }
+
+            .cTGPxG .customer_info {
+                display: flex;
+                -webkit-box-align: center;
+                align-items: center;
+                color: rgb(56, 56, 61);
+                margin-bottom: 2px;
+                font-weight: 600;
+            }
+
+            .cTGPxG .customer_info p {
+                margin: 0;
+                word-break: break-word;
+            }
+
+            .cTGPxG .customer_info i {
+                display: block;
+                width: 1px;
+                height: 20px;
+                background-color: rgb(235, 235, 240);
+                margin: 0 8px;
+            }
+
+            .cTGPxG {
+                font-size: 14px;
+                line-height: 20px;
+            }
+
+            .cTGPxG .address {
+                color: rgb(128, 128, 137);
+                font-weight: normal;
+            }
+
+            .cTGPxG .address__type--home {
+                color: rgb(0, 171, 86);
+                background-color: rgb(239, 255, 244);
+            }
+
+            .cTGPxG .address__type {
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 16px;
+                padding: 0 6px;
+                border-radius: 100px;
+                margin-right: 4px;
+                height: 18px;
+                display: inline-flex;
+                -webkit-box-align: center;
+                align-items: center;
+            }
+            /*!sc*/
+            [type="button"]::-moz-focus-inner,
+            [type="reset"]::-moz-focus-inner,
+            [type="submit"]::-moz-focus-inner,
+            button::-moz-focus-inner {
+                border-style: none;
+                padding: 0;
+            }
+            /*!sc*/
+            [type="button"]:-moz-focusring,
+            [type="reset"]:-moz-focusring,
+            [type="submit"]:-moz-focusring,
+            button:-moz-focusring {
+                outline: 1px dotted ButtonText;
+            }
+            /*!sc*/
+            fieldset {
+                padding: 0.35em 0.75em 0.625em;
+            }
+            /*!sc*/
+            legend {
+                box-sizing: border-box;
+                color: inherit;
+                display: table;
+                max-width: 100%;
+                padding: 0;
+                white-space: normal;
+            }
+            /*!sc*/
+            progress {
+                vertical-align: baseline;
+            }
+            /*!sc*/
+            textarea {
+                overflow: auto;
+            }
+            /*!sc*/
+            [type="checkbox"],
+            [type="radio"] {
+                box-sizing: border-box;
+                padding: 0;
+            }
+            /*!sc*/
+            [type="number"]::-webkit-inner-spin-button,
+            [type="number"]::-webkit-outer-spin-button {
+                height: auto;
+            }
+            /*!sc*/
+
+            /*!sc*/
+            details {
+                display: block;
+            }
+            /*!sc*/
+            summary {
+                display: list-item;
+            }
+            /*!sc*/
+            template {
+                display: none;
+            }
+            /*!sc*/
+            [hidden] {
+                display: none;
+            }
+            /*!sc*/
+            data-styled.g3[id="sc-global-ecVvVt1"] {
+                content: "sc-global-ecVvVt1,";
+            }
+            /*!sc*/
+            *,
+            *:after,
+            *:before {
+                box-sizing: border-box;
+            }
+            /*!sc*/
+            body {
+                overflow-x: hidden;
+            }
+            /*!sc*/
+            img {
+                max-width: 100%;
+            }
+            /*!sc*/
+            #snack-bar {
+                position: fixed;
+                right: 20px;
+                bottom: 20px;
+            }
+            /*!sc*/
+            #snack-bar > div {
+                margin-top: 12px;
+            }
+            /*!sc*/
+            data-styled.g4[id="sc-global-DrhsH1"] {
+                content: "sc-global-DrhsH1,";
+            }
+            /*!sc*/
+            .server-loading {
+                position: fixed;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                background: white;
+                z-index: 999999;
+            }
+            /*!sc*/
+            html {
+                background-color: #F5F5FA;
+            }
+            /*!sc*/
+            html.async-hide body {
+                opacity: 0 !important;
+            }
+            /*!sc*/
+            a {
+                color: #0B74E5;
+                -webkit-text-decoration: none;
+                text-decoration: none;
+            }
+            /*!sc*/
+            a:hover {
+                opacity: 0.95;
+            }
+            /*!sc*/
+            p {
+                margin: 0 0 10px;
+            }
+            /*!sc*/
+            b,
+            strong {
+                font-weight: 500;
+            }
+            /*!sc*/
+            .icon {
+                display: inline-block;
+                vertical-align: middle;
+                background-repeat: no-repeat;
+                background-position: 0 0;
+            }
+            /*!sc*/
+            .icon.tikinow-15 {
+                width: 53px;
+                height: 15px;
+                background-image: url("https://frontend.tikicdn.com/_desktop-next/static/img/icons/tikinow/tiki-now-15.png");
+                background-size: 53px 15px;
+            }
+            /*!sc*/
+            @media (-webkit-min-device-pixel-ratio :1.5) , (-webkit-min-device-pixel-ratio :2) , (min-resolution :192dpi) {
+                .icon.tikinow-15 {
+                    background-image: url("https://frontend.tikicdn.com/_desktop-next/static/img/icons/tikinow/tiki-now-15@2x.png");
+                }
+            }
+            /*!sc*/
+            .icon.tikinow-26 {
+                width: 91px;
+                height: 26px;
+                background-image: url("https://frontend.tikicdn.com/_desktop-next/static/img/icons/tikinow/tiki-now-26.png");
+                background-size: 91px 26px;
+            }
+            /*!sc*/
+            @media (-webkit-min-device-pixel-ratio :1.5) , (-webkit-min-device-pixel-ratio :2) , (min-resolution :192dpi) {
+                .icon.tikinow-26 {
+                    background-image: url("https://frontend.tikicdn.com/_desktop-next/static/img/icons/tikinow/tiki-now-26@2x.png");
+                }
+            }
+            /*!sc*/
+            .icon.thumb-up {
+                width: 17px;
+                height: 17px;
+                background-image: url("https://frontend.tikicdn.com/_desktop-next/static/img/icons/thumb-up.png");
+                background-size: 17px 17px;
+            }
+            /*!sc*/
+            @media (-webkit-min-device-pixel-ratio :1.5) , (-webkit-min-device-pixel-ratio :2) , (min-resolution :192dpi) {
+                .icon.thumb-up {
+                    background-image: url("https://frontend.tikicdn.com/_desktop-next/static/img/icons/thumb-up@2x.png");
+                }
+            }
+            /*!sc*/
+            .icon.thumb-up-3x {
+                width: 17px;
+                height: 17px;
+                background-image: url("https://frontend.tikicdn.com/_desktop-next/static/img/icons/thumb-up-2@3x.png");
+                background-size: 17px 17px;
+            }
+            /*!sc*/
+            .icon.reply-arrow {
+                width: 19px;
+                height: 16px;
+                background-image: url("https://frontend.tikicdn.com/_desktop-next/static/img/icons/reply-arrow.png");
+                background-size: 19px 16px;
+            }
+            /*!sc*/
+            @media (-webkit-min-device-pixel-ratio :1.5) , (-webkit-min-device-pixel-ratio :2) , (min-resolution :192dpi) {
+                .icon.reply-arrow {
+                    background-image: url("https://frontend.tikicdn.com/_desktop-next/static/img/icons/reply-arrow@2x.png");
+                }
+            }
+            /*!sc*/
+            .icon.guarantee {
+                width: 16px;
+                height: 16px;
+                background-image: url("https://frontend.tikicdn.com/_desktop-next/static/img/icons/guarantee.png");
+                background-size: 16px 16px;
+            }
+            /*!sc*/
+            @media (-webkit-min-device-pixel-ratio :1.5) , (-webkit-min-device-pixel-ratio :2) , (min-resolution :192dpi) {
+                .icon.guarantee {
+                    background-image: url("https://frontend.tikicdn.com/_desktop-next/static/img/icons/guarantee@2x.png");
+                }
+            }
+            /*!sc*/
+            .icon.flag-2x {
+                width: 14px;
+                height: 16px;
+                background-image: url("https://frontend.tikicdn.com/_desktop-next/static/img/icons/flag@2x.png");
+                background-size: 14px 16px;
+            }
+            /*!sc*/
+            .icon.warning-svg {
+                width: 16px;
+                height: 17px;
+                background-image: url("https://frontend.tikicdn.com/_desktop-next/static/img/icons/warning.svg");
+                background-size: 16px 17px;
+            }
+            /*!sc*/
+            .icon.prize {
+                width: 23px;
+                height: 24px;
+                background-image: url("https://frontend.tikicdn.com/_desktop-next/static/img/icons/prize.png");
+                background-size: 23px 24px;
+            }
+            /*!sc*/
+            @media (-webkit-min-device-pixel-ratio :1.5) , (-webkit-min-device-pixel-ratio :2) , (min-resolution :192dpi) {
+                .icon.prize {
+                    background-image: url("https://frontend.tikicdn.com/_desktop-next/static/img/icons/prize@2x.png");
+                }
+            }
+            /*!sc*/
+            .tikicon.icon-bound {
+                width: 16px;
+                height: 16px;
+                background-image: url("https://frontend.tikicdn.com/_desktop-next/static/img/icons/bound.png");
+                background-size: 16px 16px;
+            }
+            /*!sc*/
+            @media (-webkit-min-device-pixel-ratio :1.5) , (-webkit-min-device-pixel-ratio :2) , (min-resolution :192dpi) {
+                .tikicon.icon-bound {
+                    background-image: url("https://frontend.tikicdn.com/_desktop-next/static/img/icons/bound@2x.png");
+                }
+            }
+            /*!sc*/
+            .fade-loading-animated {
+                -webkit-animation-name: fadeLoading;
+                animation-name: fadeLoading;
+                -webkit-animation-duration: 2s;
+                animation-duration: 2s;
+                -webkit-animation-iteration-count: infinite;
+                animation-iteration-count: infinite;
+                -webkit-animation-timing-function: linear;
+                animation-timing-function: linear;
+            }
+
+            /*!sc*/
+            data-styled.g6[id="sc-global-lowZDM1"] {
+                content: "sc-global-lowZDM1,";
+            }
+            /*!sc*/
+            .hfMLFx {
+                width: 1270px;
+                padding-left: 15px;
+                padding-right: 15px;
+                margin-right: auto;
+                margin-left: auto;
+            }
+            /*!sc*/
+            data-styled.g13[id="Container-sc-itwfbd-0"] {
+                content: "hfMLFx,";
+            }
+            /*!sc*/
+            .kJwyWU {
+                background: #efefef;
+                background: linear-gradient(90deg, hsla(0, 0%, 74.5%, 0.2) 25%, hsla(0, 0%, 50.6%, 0.24) 37%, hsla(0, 0%, 74.5%, 0.2) 63%);
+                background-size: 400% 100%;
+                -webkit-animation: none;
+                animation: none;
+            }
+            /*!sc*/
+            .fQwniA {
+                background: #efefef;
+                background: linear-gradient(90deg, hsla(0, 0%, 74.5%, 0.2) 25%, hsla(0, 0%, 50.6%, 0.24) 37%, hsla(0, 0%, 74.5%, 0.2) 63%);
+                background-size: 400% 100%;
+                -webkit-animation: fyBcSW 1.4s ease infinite;
+                animation: fyBcSW 1.4s ease infinite;
+            }
+            /*!sc*/
+            data-styled.g34[id="sc-jSFjdj"] {
+                content: "kJwyWU,fQwniA,";
+            }
+            /*!sc*/
+            .hgsBUf {
+                margin-left: 206px;
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-align-items: flex-start;
+                -webkit-box-align: flex-start;
+                -ms-flex-align: flex-start;
+                align-items: flex-start;
+            }
+            /*!sc*/
+            .hgsBUf a {
+                display: block;
+                font-size: 11px;
+                line-height: 16px;
+                color: white;
+                margin-right: 12px;
+            }
+            /*!sc*/
+            data-styled.g95[id="style__StyledHeaderKeyWords-sc-1tmiyrh-0"] {
+                content: "hgsBUf,";
+            }
+            /*!sc*/
+            .lhUPfd {
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-align-items: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                -webkit-box-pack: end;
+                -webkit-justify-content: flex-end;
+                -ms-flex-pack: end;
+                justify-content: flex-end;
+            }
+            /*!sc*/
+            .lhUPfd .profile-icon {
+                width: 32px;
+                height: 32px;
+                margin-right: 8px;
+                border-radius: 2px;
+            }
+            /*!sc*/
+            .lhUPfd .arrowIcon {
+                width: 16px;
+                height: 16px;
+            }
+            /*!sc*/
+            .lhUPfd .cart-wrapper {
+                position: relative;
+                margin-right: 8px;
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+            }
+            /*!sc*/
+            .lhUPfd .cart-wrapper .cart-icon {
+                width: 32px;
+                height: 32px;
+            }
+            /*!sc*/
+            .lhUPfd .cart-wrapper .cart-text {
+                color: #ffffff;
+                font-weight: 500;
+                white-space: nowrap;
+                font-size: 13px;
+                line-height: 20px;
+            }
+            /*!sc*/
+            data-styled.g98[id="Userstyle__Root-sc-6e6am-0"] {
+                content: "lhUPfd,";
+            }
+            /*!sc*/
+            .cHRIKv {
+                cursor: pointer;
+                margin: 0 0 0 16px;
+                -webkit-align-items: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                color: #ffffff;
+                font-size: 12px;
+                position: relative;
+                -webkit-letter-spacing: 0.7px;
+                -moz-letter-spacing: 0.7px;
+                -ms-letter-spacing: 0.7px;
+                letter-spacing: 0.7px;
+                width: 162px;
+            }
+            /*!sc*/
+            .cHRIKv .account-label {
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-align-items: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                font-size: 13px;
+                line-height: 20px;
+                min-width: 120px;
+            }
+            /*!sc*/
+            .cHRIKv .account-label > span {
+                max-width: 104px;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+            /*!sc*/
+            .cHRIKv:hover .toggler {
+                display: block;
+            }
+            /*!sc*/
+            .cHRIKv > .tikicon {
+                margin-right: 12px;
+            }
+            /*!sc*/
+            data-styled.g99[id="Userstyle__Item-sc-6e6am-1"] {
+                content: "cHRIKv,";
+            }
+            /*!sc*/
+            .cucUum {
+                -webkit-align-items: flex-end;
+                -webkit-box-align: flex-end;
+                -ms-flex-align: flex-end;
+                align-items: flex-end;
+                width: 94px;
+            }
+            /*!sc*/
+            data-styled.g100[id="Userstyle__CartItemInner-sc-6e6am-2"] {
+                content: "cucUum,";
+            }
+            /*!sc*/
+            .kYZPng {
+                color: #ffffff;
+                font-weight: 400;
+                white-space: nowrap;
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-flex-direction: column;
+                -ms-flex-direction: column;
+                flex-direction: column;
+            }
+            /*!sc*/
+            .kYZPng small {
+                font-size: 11px;
+                font-weight: 300;
+            }
+            /*!sc*/
+            data-styled.g101[id="Userstyle__ItemText-sc-6e6am-3"] {
+                content: "kYZPng,";
+            }
+            /*!sc*/
+            .ohfHv {
+                color: #242424;
+                background: #fdd835;
+                height: 20px;
+                left: 20px;
+                top: -2px;
+                border-radius: 40px;
+                display: inline-block;
+                text-align: center;
+                line-height: 20px;
+                font-size: 13px;
+                font-weight: 500;
+                position: absolute;
+                padding: 0 7px;
+            }
+            /*!sc*/
+            data-styled.g103[id="Userstyle__ItemCartQty-sc-6e6am-5"] {
+                content: "ohfHv,";
+            }
+            /*!sc*/
+            .gJAiTt {
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                display: inline-block;
+                overflow: hidden;
+                text-transform: capitalize;
+                font-size: 11px;
+                line-height: 16px;
+            }
+            /*!sc*/
+            data-styled.g110[id="Userstyle__NoWrap-sc-6e6am-12"] {
+                content: "gJAiTt,";
+            }
+            /*!sc*/
+            .hfiWvr {
+                position: relative;
+                display: block;
+            }
+            /*!sc*/
+            .hfiWvr:hover {
+                opacity: 1;
+            }
+            /*!sc*/
+            data-styled.g112[id="Userstyle__CartItem-sc-6e6am-14"] {
+                content: "hfiWvr,";
+            }
+            /*!sc*/
+            .fnCMyp {
+                position: relative;
+                z-index: 1;
+            }
+            /*!sc*/
+            .fnCMyp .tiki-seller {
+                color: white;
+                font-size: 12px;
+                margin-bottom: 12px;
+                height: 22px;
+                border-radius: 10px;
+                background-color: rgba(255, 255, 255, 0.25);
+                padding: 0 8px;
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-align-items: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+            }
+            /*!sc*/
+            .fnCMyp .tiki-seller .icon {
+                width: 12px;
+                height: 12px;
+                margin-right: 4px;
+            }
+            /*!sc*/
+            .fnCMyp .tiki-seller .text {
+                line-height: 16px;
+                margin-top: 1px;
+            }
+            /*!sc*/
+            data-styled.g151[id="Bottom__Root-sc-azeq0g-0"] {
+                content: "fnCMyp,";
+            }
+            /*!sc*/
+            .fPLoMu {
+                -webkit-flex: 1;
+                -ms-flex: 1;
+                flex: 1;
+            }
+            /*!sc*/
+            data-styled.g152[id="FormSearch__Root-sc-1fwg3wo-0"] {
+                content: "fPLoMu,";
+            }
+            /*!sc*/
+            .dPyAZH {
+                width: 100%;
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                position: relative;
+                box-shadow: 0 1px 2px 0 rgba(98, 98, 98, 0.5);
+            }
+            /*!sc*/
+            data-styled.g153[id="FormSearch__Form-sc-1fwg3wo-1"] {
+                content: "dPyAZH,";
+            }
+            /*!sc*/
+            .gBxvSE {
+                border: 0;
+                padding: 0 12px;
+                font-size: 13px;
+                border-radius: 2px 0 0 2px;
+                -webkit-flex: 1;
+                -ms-flex: 1;
+                flex: 1;
+                outline: none;
+            }
+            /*!sc*/
+            .gBxvSE::-webkit-input-placeholder {
+                color: #787878;
+                font-size: 13px;
+            }
+            /*!sc*/
+            .gBxvSE::-moz-placeholder {
+                color: #787878;
+                font-size: 13px;
+            }
+            /*!sc*/
+            .gBxvSE:-ms-input-placeholder {
+                color: #787878;
+                font-size: 13px;
+            }
+            /*!sc*/
+            .gBxvSE::placeholder {
+                color: #787878;
+                font-size: 13px;
+            }
+            /*!sc*/
+            data-styled.g154[id="FormSearch__Input-sc-1fwg3wo-2"] {
+                content: "gBxvSE,";
+            }
+            /*!sc*/
+            .bUpWwh {
+                cursor: pointer;
+                border: 0;
+                width: 120px;
+                background: #0d5cb6;
+                height: 40px;
+                border-radius: 0 2px 2px 0;
+                color: white;
+                font-size: 13px;
+                font-weight: 500;
+                outline: none;
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-align-items: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                -webkit-box-pack: center;
+                -webkit-justify-content: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+            }
+            /*!sc*/
+            .bUpWwh .icon-search {
+                width: 20px;
+                height: 20px;
+                margin: 0 8px 0 0;
+            }
+            /*!sc*/
+            .bUpWwh .tikicon {
+                margin-right: 7px;
+            }
+            /*!sc*/
+            data-styled.g155[id="FormSearch__Button-sc-1fwg3wo-3"] {
+                content: "bUpWwh,";
+            }
+            /*!sc*/
+            .cWrfyT {
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-align-items: flex-center;
+                -webkit-box-align: flex-center;
+                -ms-flex-align: flex-center;
+                align-items: flex-center;
+                -webkit-box-pack: justify;
+                -webkit-justify-content: space-between;
+                -ms-flex-pack: justify;
+                justify-content: space-between;
+                -webkit-flex: 1;
+                -ms-flex: 1;
+                flex: 1;
+            }
+            /*!sc*/
+            .cWrfyT .tiki-logo {
+                width: 60px;
+                height: 40px;
+                display: block;
+            }
+            /*!sc*/
+            .cWrfyT .tiki-logo img {
+                width: 100%;
+                height: 100%;
+            }
+            /*!sc*/
+            .cWrfyT .icon-tiki-now {
+                width: 134px;
+                height: 44px;
+                display: block;
+            }
+            /*!sc*/
+            .cWrfyT .icon-tiki-now > img {
+                width: 100%;
+                height: 100%;
+            }
+            /*!sc*/
+            data-styled.g156[id="style__Logo-sc-3sdkaq-0"] {
+                content: "cWrfyT,";
+            }
+            /*!sc*/
+            .edlkEo {
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                padding: 16px 0 10px;
+                height: auto;
+                position: relative;
+                z-index: 2;
+                -webkit-align-items: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+            }
+            /*!sc*/
+            .edlkEo .logo-menu {
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-align-items: flex-start;
+                -webkit-box-align: flex-start;
+                -ms-flex-align: flex-start;
+                align-items: flex-start;
+                -webkit-flex-basis: 190px;
+                -ms-flex-preferred-size: 190px;
+                flex-basis: 190px;
+                -webkit-flex-shrink: 0;
+                -ms-flex-negative: 0;
+                flex-shrink: 0;
+                margin-right: 16px;
+            }
+            /*!sc*/
+            data-styled.g157[id="Middle__Wrap-sc-vop1h1-0"] {
+                content: "edlkEo,";
+            }
+            /*!sc*/
+            .hBRVdJ {
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-flex: 1;
+                -ms-flex: 1;
+                flex: 1;
+                -webkit-align-items: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+            }
+
+            .eZNlgw {
+                margin-bottom: 32px;
+            }
+
+            .eZNlgw .row {
+                display: flex;
+                -webkit-box-pack: start;
+                justify-content: flex-start;
+                -webkit-box-align: center;
+                align-items: center;
+                margin: 0 -15px;
+            }
+
+            .eZNlgw .col-1 {
+                width: 398px;
+                padding: 0 15px;
+            }
+
+            .eZNlgw .product__images {
+                display: flex;
+            }
+
+            .eZNlgw .product__checkbox {
+                position: relative;
+                top: 35px;
+            }
+
+            .eZNlgw .product__img {
+                display: inline-block;
+            }
+
+            .eZNlgw .product__content {
+                width: calc(100% - 100px);
+                padding-left: 10px;
+                position: relative;
+            }
+
+            .eZNlgw .product__name {
+                display: -webkit-box;
+                position: absolute;
+                top: 36%;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                font-size: 13px;
+                color: rgb(36, 36, 36);
+                margin-bottom: 5px;
+                line-height: 20px;
+            }
+
+            .eZNlgw .product__title-tikinow {
+                font-weight: 500;
+                text-transform: uppercase;
+                color: rgb(0, 153, 0);
+                font-size: 11px;
+                display: flex;
+                -webkit-box-align: center;
+                align-items: center;
+                margin: 0;
+            }
+
+            .gVBcCW {
+                display: inline-flex;
+                -webkit-box-align: center;
+                align-items: center;
+                border-radius: 4px;
+                overflow: hidden;
+            }
+
+            .eZNlgw .col-2 {
+                width: 190px;
+                padding: 0 15px;
+            }
+
+            .eZNlgw .product__real-prices {
+                font-weight: 500;
+                color: rgb(36, 36, 36);
+                font-size: 13px;
+                display: inline-block;
+                margin-right: 5px;
+            }
+
+            .eZNlgw .col-3 {
+                width: 130px;
+                padding: 0 15px;
+            }
+
+            .gEpOC {
+                display: inline-flex;
+                flex-wrap: nowrap;
+                border: 1px solid rgb(200, 200, 200);
+                border-radius: 3px;
+                width: 84px;
+            }
+
+            .gEpOC .qty-decrease,
+            .gEpOC .qty-increase {
+                display: inline-block;
+                border-right: 1px solid rgb(200, 200, 200);
+                color: rgb(153, 153, 153);
+                cursor: pointer;
+                width: 24px;
+                height: 24px;
+            }
+
+            .gEpOC .qty-input {
+                border: none;
+                background: transparent;
+                width: 32px;
+                text-align: center;
+                font-size: 13px;
+                appearance: none;
+                margin: 0;
+                outline: none;
+            }
+
+            .gEpOC .qty-increase {
+                border-right: none;
+                border-left: 1px solid rgb(200, 200, 200);
+            }
+
+            .ihAmbT {
+                list-style: none;
+                margin: 32px 0 0;
+                padding: 0 16px 3px;
+                background: rgb(255, 255, 255);
+            }
+
+            .eZNlgw .product-qty__limit,
+            .eZNlgw .product__out-off-stock {
+                color: rgb(253, 130, 8);
+                font-size: 11px;
+                line-height: 16px;
+                display: block;
+                margin-top: 5px;
+            }
+
+            .eZNlgw .col-4 {
+                width: 120px;
+                padding: 0 15px;
+            }
+
+            .eZNlgw .col-5 {
+                width: 50px;
+                text-align: right;
+            }
+
+            .eZNlgw .col-5 {
+                width: 50px;
+                text-align: right;
+            }
+
+            .eZNlgw .product__delete {
+                display: inline-block;
+                cursor: pointer;
+                position: relative;
+            }
+
+            .eZNlgw .product__delete img {
+                width: 17px;
+                height: 17px;
+            }
+
+            /*!sc*/
+            data-styled.g158[id="Middle__LeftContainer-sc-vop1h1-1"] {
+                content: "hBRVdJ,";
+            }
+            /*!sc*/
+            .ebTvCC {
+                position: relative;
+                background: #1a94ff;
+                z-index: 999;
+            }
+            /*!sc*/
+            .ebTvCC.main-header-sticky {
+                left: 0;
+                position: fixed;
+                top: 0;
+                width: 100%;
+            }
+            /*!sc*/
+            .ebTvCC * {
+                -webkit-letter-spacing: normal;
+                -moz-letter-spacing: normal;
+                -ms-letter-spacing: normal;
+                letter-spacing: normal;
+            }
+            /*!sc*/
+            data-styled.g159[id="style__Header-sc-q53692-0"] {
+                content: "ebTvCC,";
+            }
+
+            /*!sc*/
+            data-styled.g1599[id="sc-keyframes-fyBcSW"] {
+                content: "fyBcSW,";
+            }
+            /*!sc*/
+            .bVA-DDf {
+                position: relative;
+                padding: 16px;
+                margin-bottom: 16px;
+                background-color: #ffffff;
+            }
+            /*!sc*/
+            data-styled.g3599[id="Section__Container-sc-r6ysni-0"] {
+                content: "bVA-DDf,";
+            }
+            /*!sc*/
+            .lpkOix .skeleton-cart .skeleton {
+                display: inline-block;
+                border-radius: 4px;
+            }
+            /*!sc*/
+            .lpkOix .skeleton-cart .border-100 {
+                border-radius: 100px;
+            }
+            /*!sc*/
+            .lpkOix .skeleton-cart .border-8 {
+                border-radius: 8px;
+            }
+            /*!sc*/
+            .lpkOix .skeleton-cart__title {
+                font-size: 20px;
+                font-weight: 500;
+                margin: 0 0 10px;
+                color: #000;
+                line-height: 28px;
+                text-transform: uppercase;
+            }
+            /*!sc*/
+            .lpkOix .skeleton-cart__left {
+                width: 906px;
+            }
+            /*!sc*/
+            .lpkOix .skeleton-cart__right {
+                width: 318px;
+            }
+            /*!sc*/
+            .lpkOix .skeleton-cart__right .skeleton {
+                margin-bottom: 12px;
+            }
+            /*!sc*/
+            .lpkOix .skeleton-cart__right .skeleton-cart__content {
+                padding: 16px;
+            }
+            /*!sc*/
+            .lpkOix .skeleton-cart__heading {
+                background: #ffffff;
+                border-radius: 4px;
+                padding: 5px 10px;
+                margin-bottom: 10px;
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-align-items: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+            }
+            /*!sc*/
+            .lpkOix .skeleton-cart__heading .skeleton {
+                margin-right: 8px;
+            }
+            /*!sc*/
+            .lpkOix .skeleton-cart__content {
+                background: #ffffff;
+                border-radius: 4px;
+                padding: 5px 10px;
+                margin-bottom: 10px;
+            }
+            /*!sc*/
+            .lpkOix .skeleton-cart__content .skeleton-cart__heading {
+                padding: 0;
+            }
+            /*!sc*/
+            .lpkOix .skeleton-cart__product {
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-align-items: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                margin-bottom: 32px;
+            }
+            /*!sc*/
+            .lpkOix .skeleton-cart__product div {
+                margin-right: 5px;
+            }
+            /*!sc*/
+            .lpkOix .skeleton-cart__product div:last-child .skeleton {
+                display: block;
+                margin-bottom: 10px;
+            }
+            /*!sc*/
+            .lpkOix .skeleton-cart__coupon {
+                border-top: 1px solid #f2f2f2;
+                padding: 10px;
+            }
+            /*!sc*/
+            .lpkOix .skeleton-cart__coupon .skeleton {
+                margin-right: 10px;
+            }
+            /*!sc*/
+            data-styled.g4274[id="styles__StyledBlockSkeleton-sc-eq07wr-0"] {
+                content: "lpkOix,";
+            }
+            /*!sc*/
+            .gmUIFl.gmUIFl {
+                border-radius: 4px;
+                margin-bottom: 12px;
+            }
+            /*!sc*/
+            data-styled.g4284[id="styles__SkeletonContainer-sc-vgfrvy-1"] {
+                content: "gmUIFl,";
+            }
+            /*!sc*/
+            .eLNiwO {
+                background: #F5F5FA !important;
+            }
+            /*!sc*/
+            data-styled.g4285[id="styles__StyledSkeleton-sc-vgfrvy-2"] {
+                content: "eLNiwO,";
+            }
+            /*!sc*/
+            .cJiyOE.cJiyOE {
+                border-radius: 4px;
+                margin-bottom: 12px;
+            }
+            /*!sc*/
+            data-styled.g4289[id="styles__SkeletonContainer-sc-skkjlt-3"] {
+                content: "cJiyOE,";
+            }
+            /*!sc*/
+            .cCKDtH {
+                background: #F5F5FA !important;
+            }
+            /*!sc*/
+            data-styled.g4290[id="styles__StyledSkeleton-sc-skkjlt-4"] {
+                content: "cCKDtH,";
+            }
+            /*!sc*/
+            .dvFPWG {
+                min-height: calc(100vh - 100px);
+            }
+            /*!sc*/
+            .dvFPWG .main-title {
+                margin: 20px 0;
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-align-items: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+            }
+            /*!sc*/
+            .dvFPWG .main-title h4 {
+                font-size: 20px;
+                font-weight: 500;
+                margin: 0;
+                color: #000;
+                line-height: 28px;
+                text-transform: uppercase;
+                -webkit-flex-basis: calc(910px - 113px);
+                -ms-flex-preferred-size: calc(910px - 113px);
+                flex-basis: calc(910px - 113px);
+            }
+            /*!sc*/
+            data-styled.g4307[id="styles__StyledMainComponent-sc-1mncg38-0"] {
+                content: "dvFPWG,";
+            }
+            /*!sc*/
+            .kXPYZZ {
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-flex-wrap: nowrap;
+                -ms-flex-wrap: nowrap;
+                flex-wrap: nowrap;
+                -webkit-box-pack: justify;
+                -webkit-justify-content: space-between;
+                -ms-flex-pack: justify;
+                justify-content: space-between;
+                -webkit-flex-basis: 100%;
+                -ms-flex-preferred-size: 100%;
+                flex-basis: 100%;
+            }
+            /*!sc*/
+            data-styled.g4308[id="styles__Content-sc-1mncg38-1"] {
+                content: "kXPYZZ,";
+            }
+            /*!sc*/
+            .negmo {
+                -webkit-flex: 1;
+                -ms-flex: 1;
+                flex: 1;
+                -webkit-flex-basis: 910px;
+                -ms-flex-preferred-size: 910px;
+                flex-basis: 910px;
+            }
+            /*!sc*/
+            data-styled.g4309[id="styles__Left-sc-1mncg38-2"] {
+                content: "negmo,";
+            }
+            /*!sc*/
+            .eEhtFa {
+                -webkit-flex: 1;
+                -ms-flex: 1;
+                flex: 1;
+                -webkit-flex-basis: calc(100% - 925px);
+                -ms-flex-preferred-size: calc(100% - 925px);
+                flex-basis: calc(100% - 925px);
+                margin-left: 20px;
+                display: block;
+            }
+            /*!sc*/
+            .eEhtFa .right-inner {
+                position: -webkit-sticky;
+                position: sticky;
+                top: 20px;
+            }
+            /*!sc*/
+            data-styled.g4310[id="styles__Right-sc-1mncg38-3"] {
+                content: "eEhtFa,";
+            }
+            /*!sc*/
+            .bsEPkA {
+                background: #ff424e;
+                color: #ffffff;
+                padding: 13px 10px;
+                text-align: center;
+                border-radius: 4px;
+                border: none;
+                width: 100%;
+                display: block;
+                cursor: pointer;
+                margin: 15px 0 0;
+            }
+            /*!sc*/
+            .bsEPkA:hover {
+                opacity: 0.8;
+            }
+            /*!sc*/
+            data-styled.g4313[id="styles__StyledButton-sc-hokrdw-0"] {
+                content: "bsEPkA,";
+            }
+            /*!sc*/
+            .khxach {
+                background: #ffffff;
+                border-radius: 4px;
+                padding: 16px;
+                margin-bottom: 10px;
+            }
+            /*!sc*/
+            .khxach .skeleton {
+                margin-bottom: 12px;
+                border-radius: 4px;
+            }
+            /*!sc*/
+            data-styled.g4316[id="styles__StyledSkeleton-sc-12mfsgy-2"] {
+                content: "khxach,";
+            }
+            /*!sc*/
+            .Pvpwm .dialog-content {
+                color: rgb(56, 56, 61);
+                margin-bottom: 24px;
+                display: flex;
+            }
+            .Pvpwm .dialog-content__icon {
+                margin-right: 8px;
+                flex-shrink: 0;
+            }
+            
+            .Pvpwm .dialog-content__title {
+                font-size: 16px;
+                line-height: 24px;
+                font-weight: 500;
+                margin-bottom: 8px;
+            }
+            .Pvpwm .dialog-content__message {
+                font-size: 14px;
+                line-height: 20px;
+                color: rgb(81, 81, 88);
+                word-break: break-word;
+            }
+            .Pvpwm .dialog-control {
+                display: flex;
+                text-align: center;
+                font-size: 14px;
+                line-height: 20px;
+                font-weight: 500;
+                -webkit-box-pack: end;
+                justify-content: flex-end;
+            }
+            .Pvpwm .dialog-control__button {
+                padding: 8px 16px;
+                border-radius: 4px;
+                height: 36px;
+                cursor: pointer;
+                box-sizing: border-box;
+            }
+            .Pvpwm .dialog-control__button--secondary {
+                border: 1px solid rgb(11, 116, 229);
+                color: rgb(11, 116, 229);
+                margin-right: 8px;
+            }
+            .Pvpwm .dialog-control__button--main {
+                background-color: rgb(11, 116, 229);
+                color: rgb(255, 255, 255);
+            }
+        </style>
+       
+       
+    </head>
+    <body>
+        <noscript>
+            <iframe
+                src="https://www.googletagmanager.com/ns.html?id=GTM-KR9FQH"
+                height="0"
+                width="0"
+                style="display: none; visibility: hidden"></iframe>
+        </noscript>
+        <div id="__next">
+            <div class="cart-page">
+                <header id="main-header" class="style__Header-sc-q53692-0 ebTvCC">
+                    <div class="Container-sc-itwfbd-0 hfMLFx">
+                        <div class="Middle__Wrap-sc-vop1h1-0 edlkEo">
+                            <div class="Middle__LeftContainer-sc-vop1h1-1 hBRVdJ">
+                                <div class="logo-menu">
+                                    <div class="style__Logo-sc-3sdkaq-0 cWrfyT">
+                                        <a href="/" data-view-id="header_main_logo" class="tiki-logo"><img
+                                            src="https://salt.tikicdn.com/ts/upload/ae/f5/15/2228f38cf84d1b8451bb49e2c4537081.png"
+                                            alt="tiki-logo"/></a>
+                                    </div>
+                                </div>
+                                <div class="FormSearch__Root-sc-1fwg3wo-0 fPLoMu">
+                                    <div class="FormSearch__Form-sc-1fwg3wo-1 dPyAZH">
+                                        <input
+                                            type="text"
+                                            data-view-id="main_search_form_input"
+                                            value=""
+                                            placeholder="Tìm sản phẩm, danh mục hay thương hiệu mong muốn ..."
+                                            class="FormSearch__Input-sc-1fwg3wo-2 gBxvSE"/>
+                                        <button
+                                            data-view-id="main_search_form_button"
+                                            class="FormSearch__Button-sc-1fwg3wo-3 bUpWwh">
+                                            <img
+                                                class="icon-search"
+                                                src="https://salt.tikicdn.com/ts/upload/ed/5e/b8/8538366274240326978318348ea8af7c.png"/>Tìm Kiếm
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                data-view-id="header_user_shortcut"
+                                class="Userstyle__Root-sc-6e6am-0 lhUPfd">
+                                <div
+                                    data-view-id="header_header_account_container"
+                                    class="Userstyle__Item-sc-6e6am-1 cHRIKv">
+                                    <img
+                                        class="profile-icon"
+                                        src="https://salt.tikicdn.com/ts/upload/67/de/1e/90e54b0a7a59948dd910ba50954c702e.png"/><span class="Userstyle__ItemText-sc-6e6am-3 kYZPng"><span class="Userstyle__NoWrap-sc-6e6am-12 gJAiTt">Đăng Nhập / Đăng Ký</span><span class="account-label"><span>Tài khoản</span><img
+                                        class="arrowIcon"
+                                        src="https://salt.tikicdn.com/ts/upload/d7/d4/a8/34939af2da1ceeeae9f95b7485784233.png"/></span>
+                                    </span>
+                                </div>
+                                <div class="Userstyle__CartItem-sc-6e6am-14 hfiWvr">
+                                    <a data-view-id="header_user_shortcut_cart" href="#" rel="nofollow">
+                                        <div
+                                            class="Userstyle__Item-sc-6e6am-1 Userstyle__CartItemInner-sc-6e6am-2 cHRIKv cucUum">
+                                            <div class="cart-wrapper">
+                                                <img
+                                                    class="cart-icon"
+                                                    src="https://salt.tikicdn.com/ts/upload/40/44/6c/b80ad73e5e84aeb71c08e5d8d438eaa1.png"/>
+                                                <span class="Userstyle__ItemCartQty-sc-6e6am-5 ohfHv">0</span>
+                                            </div>
+                                            <span class="cart-text">Giỏ Hàng</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Bottom__Root-sc-azeq0g-0 fnCMyp">
+                        <div
+                            style="position: relative; display: flex; justify-content: space-between"
+                            class="Container-sc-itwfbd-0 hfMLFx">
+                            <a href="https://tiki.vn/sep/my-sep" style="position: absolute; top: 0"><img
+                                src="https://salt.tikicdn.com/ts/brickv2og/70/07/62/9a90de2324bda05df7ff137972de1c70.png"
+                                alt="free-ship-badge"
+                                height="18"
+                                width="129"/></a>
+                            <div
+                                data-view-id="header_quicklinks_container"
+                                class="style__StyledHeaderKeyWords-sc-1tmiyrh-0 hgsBUf">
+                                <a
+                                    data-view-id="header_quicklinks_item"
+                                    data-view-index="0"
+                                    href="https://tiki.vn/tikingon/trai-cay/c44824">trái cây</a>
+                                <a
+                                    data-view-id="header_quicklinks_item"
+                                    data-view-index="1"
+                                    href="https://tiki.vn/tikingon/thit-trung/c54276">thịt, trứng</a>
+                                <a
+                                    data-view-id="header_quicklinks_item"
+                                    data-view-index="2"
+                                    href="https://tiki.vn/tikingon/rau-cu-qua/c54302">rau củ quả</a>
+                                <a
+                                    data-view-id="header_quicklinks_item"
+                                    data-view-index="3"
+                                    href="https://tiki.vn/tikingon/sua-bo-pho-mai/c54330">sữa, bơ, phô mai</a>
+                                <a
+                                    data-view-id="header_quicklinks_item"
+                                    data-view-index="4"
+                                    href="https://tiki.vn/tikingon/ca-thuy-hai-san/c54290">hải sản</a>
+                                <a
+                                    data-view-id="header_quicklinks_item"
+                                    data-view-index="5"
+                                    href="https://tiki.vn/tikingon/gao-mi-nong-san/c54384">gạo, mì ăn liền</a>
+                                <a
+                                    data-view-id="header_quicklinks_item"
+                                    data-view-index="6"
+                                    href="https://tiki.vn/tikingon/bia-do-uong/c54412">đồ uống, bia rượu</a>
+                                <a
+                                    data-view-id="header_quicklinks_item"
+                                    data-view-index="7"
+                                    href="https://tiki.vn/tikingon/banh-keo-gio-qua/c54452">bánh kẹo</a>
+                            </div>
+                            <a class="tiki-seller" href="/khuyen-mai/ban-hang-cung-tiki?src=desktop_header"><img
+                                class="icon"
+                                src="https://frontend.tikicdn.com/_desktop-next/static/img/icon-seller.svg"/>
+                                <span class="text">Bán hàng cùng Tiki</span>
+                            </a>
+                        </div>
+                    </div>
+                </header>
+                <main>
+                    <div class="styles__StyledMainComponent-sc-1mncg38-0 dvFPWG">
+                        <div class="Container-sc-itwfbd-0 hfMLFx">
+                            <div class="main-title">
+                                <h4>Giỏ Hàng</h4>
+                            </div>
+                            <div class="styles__Content-sc-1mncg38-1 kXPYZZ">
+                                <div class="styles__Left-sc-1mncg38-2 negmo">
+                                    <div class="styles__StyledContainerComponent-sc-9ar1hx-0 bvhHZE">
+                                        <div class="styles__StyledHeading-sc-1m1v98v-0 jKLiJX">
+                                            <label class="styles__StyledCheckbox-sc-kvz5pc-0 hNjxWW">
+                                                <input type="checkbox">
+                                                <span class="checkbox-fake"
+                                                    onclick="checkAllItem(1)">
+                                                </span>
+                                                <span class="label"></span>
+                                            </label>
+                                            <span>Đơn giá</span>
+                                            <span>Số lượng</span>
+                                            <span>Thành tiền</span>
+                                            <!-- <span class="remove-all">
+                                                <img
+                                                src="https://frontend.tikicdn.com/_desktop-next/static/img/icons/trash.svg"
+                                                alt="deleted">
+                                            </span> -->
+                                        </div>
+                                        <div>
+                                            <div class="infinite-scroll-component " style="height: auto; overflow: auto;">
+                                               
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="styles__Right-sc-1mncg38-3 eEhtFa">
+                                    <div class="right-inner" style="top: -300px;">
+                                        <div>
+                                            <div
+                                                class="flcp_container"
+                                                style="background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAu4AAADIAQMAAACNufaLAAAAA1BMVEX///+nxBvIAAAAKUlEQVR42u3BAQ0AAADCIPunNsc3YAAAAAAAAAAAAAAAAAAAAAAAACQcSjgAAcybzv4AAAAASUVORK5CYII='); background-size: cover; border-radius: 4px">
+                                                <div
+                                                    class="Section__Container-sc-r6ysni-0 styles__StyledAddressBlock-sc-vgfrvy-0 bVA-DDf cTGPxG">
+                                                    <div class="block-header">
+                                                        <h3 class="block-header__title">Giao tới</h3>
+                                                        <a class="block-header__nav" href="/checkout/shipping?isIntendedCart=1">Thay đổi</a>
+                                                    </div>
+                                                     <div class="customer_info">
+                                                        <p class="customer_info__name"></p>
+                                                        <i></i>
+                                                        <p class="customer_info__phone"></p>
+                                                    </div>
+                                                    <div class="address">
+                                                        <span class="address__type address__type--home">Nhà</span>157, đường 265, Phường Hiệp Phú, Quận 9 - TP Thủ Đức, Hồ Chí Minh
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="styles__StyledPriceSummary-sc-12mfsgy-0 iRKLRb">
+                                            <ul class="prices__items">
+                                                <li class="prices__item">
+                                                    <span class="prices__text">Tạm tính</span><span class="prices__value"></span></li>
+                                                <li class="prices__item">
+                                                    <span class="prices__text">Giảm giá</span><span class="prices__value">0đ</span></li>
+                                            </ul>
+                                            <div class="prices__total">
+                                                <span class="prices__text">Tổng tiền</span>
+                                                <div class="prices__content">
+                                                    <span class="prices__value prices__value--final"></span><span class="prices__value--noted">(Đã bao gồm VAT nếu có)</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button class="styles__StyledButton-sc-hokrdw-0 bsEPkA">
+                                            Mua Hàng
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                <span></span>
+            </div>
+            <span></span>
+            <div id="portal"></div>
+
+        </div>
+       
+       
+        <div id="snackbar-root"></div>
+        <div id="snack-bar"></div>
+        <div class="ReactModalPortal"></div>
+        <script
+            src="https://frontend.tikicdn.com/_desktop-next/static/scripts/ab-sdk.min.js?v=191021"></script>
+    </body>
+</html>
